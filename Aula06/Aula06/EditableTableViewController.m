@@ -10,7 +10,7 @@
 
 @interface EditableTableViewController ()
 
-@property (strong, nonatomic) NSArray<NSString *> *nomes;
+@property (strong, nonatomic) NSMutableArray *nomes;
 
 @end
 
@@ -25,8 +25,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
      self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.nomes = @[@"Ismael", @"Professor Pedro", @"Weuller Marcos"];
-    
+    self.nomes = [[NSMutableArray alloc] initWithArray:@[@"Ismael",
+                                                         @"Professor Pedro",
+                                                         @"Weuller Marcos"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,8 +69,9 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        // TODO: Retirar primeiro do Array, continuação
+        
+        [self.nomes removeObjectAtIndex:indexPath.row];
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
