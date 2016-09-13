@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B34DBBE1D88966500EBD976 /* CustomUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DBBD1D88966500EBD976 /* CustomUIViewController.m */; };
+		0B34DBC11D88971700EBD976 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DBC01D88971700EBD976 /* StarView.m */; };
+		0B34DBC41D88A0D300EBD976 /* PentagonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DBC31D88A0D300EBD976 /* PentagonView.m */; };
+		0B34DBC71D88A12300EBD976 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DBC61D88A12300EBD976 /* CircleView.m */; };
 		83BAF3CC1D77992D0004D32A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAF3CB1D77992D0004D32A /* main.m */; };
 		83BAF3CF1D77992D0004D32A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAF3CE1D77992D0004D32A /* AppDelegate.m */; };
 		83BAF3D21D77992D0004D32A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAF3D11D77992D0004D32A /* ViewController.m */; };
@@ -19,6 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B34DBBC1D88966500EBD976 /* CustomUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUIViewController.h; sourceTree = "<group>"; };
+		0B34DBBD1D88966500EBD976 /* CustomUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUIViewController.m; sourceTree = "<group>"; };
+		0B34DBBF1D88971700EBD976 /* StarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarView.h; sourceTree = "<group>"; };
+		0B34DBC01D88971700EBD976 /* StarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarView.m; sourceTree = "<group>"; };
+		0B34DBC21D88A0D300EBD976 /* PentagonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PentagonView.h; sourceTree = "<group>"; };
+		0B34DBC31D88A0D300EBD976 /* PentagonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PentagonView.m; sourceTree = "<group>"; };
+		0B34DBC51D88A12300EBD976 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		0B34DBC61D88A12300EBD976 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		83BAF3C71D77992D0004D32A /* Aula06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aula06.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BAF3CB1D77992D0004D32A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83BAF3CD1D77992D0004D32A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +92,14 @@
 				83BAF3E51D77997C0004D32A /* HorizontalScrollMode.m */,
 				83BAF3E71D779ECC0004D32A /* EditableTableViewController.h */,
 				83BAF3E81D779ECC0004D32A /* EditableTableViewController.m */,
+				0B34DBBC1D88966500EBD976 /* CustomUIViewController.h */,
+				0B34DBBD1D88966500EBD976 /* CustomUIViewController.m */,
+				0B34DBBF1D88971700EBD976 /* StarView.h */,
+				0B34DBC01D88971700EBD976 /* StarView.m */,
+				0B34DBC21D88A0D300EBD976 /* PentagonView.h */,
+				0B34DBC31D88A0D300EBD976 /* PentagonView.m */,
+				0B34DBC51D88A12300EBD976 /* CircleView.h */,
+				0B34DBC61D88A12300EBD976 /* CircleView.m */,
 			);
 			path = Aula06;
 			sourceTree = "<group>";
@@ -163,8 +183,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				83BAF3E61D77997C0004D32A /* HorizontalScrollMode.m in Sources */,
+				0B34DBBE1D88966500EBD976 /* CustomUIViewController.m in Sources */,
+				0B34DBC11D88971700EBD976 /* StarView.m in Sources */,
+				0B34DBC41D88A0D300EBD976 /* PentagonView.m in Sources */,
 				83BAF3D81D77992D0004D32A /* Aula06.xcdatamodeld in Sources */,
 				83BAF3D21D77992D0004D32A /* ViewController.m in Sources */,
+				0B34DBC71D88A12300EBD976 /* CircleView.m in Sources */,
 				83BAF3E91D779ECC0004D32A /* EditableTableViewController.m in Sources */,
 				83BAF3CF1D77992D0004D32A /* AppDelegate.m in Sources */,
 				83BAF3CC1D77992D0004D32A /* main.m in Sources */,
@@ -318,6 +342,7 @@
 				83BAF3E31D77992D0004D32A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
