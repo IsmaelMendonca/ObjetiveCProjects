@@ -69,31 +69,13 @@ static const CGSize kSquareSize = {40,40};
 }
 
 -(UIColor *) getRandomColor {
-    switch (arc4random() % 5) {
-        case 0:
-            return [UIColor redColor];
-            break;
-            
-        case 1:
-            return [UIColor cyanColor];
-            break;
-            
-        case 2:
-            return [UIColor greenColor];
-            break;
-            
-        case 3 :
-            return [UIColor yellowColor];
-            break;
-            
-        case 4 :
-            return [UIColor blueColor];
-            break;
-            
-        default:
-            return [UIColor whiteColor];
-            break;
-    }
+    
+    double red = (arc4random()%225)/225.0;
+    double green = (arc4random()%225)/225.0;
+    double blue = (arc4random()%225)/225.0;
+    
+    UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:1];
+    return color;
 }
 
 - (void)viewDidLoad {
@@ -127,6 +109,52 @@ static const CGSize kSquareSize = {40,40};
     }
     
     return _animator;
+}
+
+//Get screen touch movement
+- (void) touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInView:self.view];
+    CGRect frame;
+    frame.origin = location;
+    frame.size = kSquareSize;
+    
+    
+    UIView *square = [[UIView alloc] initWithFrame:frame];
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.startPoint = CGPointMake(0, 0.5);
+    gradient.endPoint = CGPointMake(1, 0.5);
+    gradient.colors = @[(id)[self getRandomColor].CGColor, (id)[self getRandomColor].CGColor];
+    gradient.opacity = 1;
+    gradient.frame = square.bounds;
+    
+    
+    [square.layer addSublayer:gradient];
+    
+//    [square setBackgroundColor:[self getRandomColor]];
+    
+    [self.viewScreen addSubview:square];
+    [self.fall addChildItem:square];
+    [self.allSquares addObject:square];
+}
+
+//Método para criar quadradinho ao clicar na tela
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInView:self.view];
+    CGRect frame;
+    frame.origin = location;
+    frame.size = kSquareSize;
+    
+    
+    UIView *square = [[UIView alloc] initWithFrame:frame];
+    [square setBackgroundColor:[self getRandomColor]];
+    
+    [self.viewScreen addSubview:square];
+    [self.fall addChildItem:square];
+    [self.allSquares addObject:square];
 }
 
 @end
