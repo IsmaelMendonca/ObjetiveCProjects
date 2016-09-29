@@ -51,7 +51,7 @@ static const CGSize kSquareSize = {40,40};
 
 #pragma mark - IBAction
 - (IBAction)square:(UIButton *)sender {
-    CGRect frame;
+    CGRect frame;  
     frame.origin = CGPointZero;
     frame.size = kSquareSize;
     
