@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coisa 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycX-Cr-6EN">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coisa 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7q-Vy-D3N">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MX9-Ye-iS9">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="JB3-Fn-zsa"/>
+                                    <constraint firstAttribute="height" constant="30" id="Tw1-4Y-bGd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="RFH-gd-Kg3" kind="showDetail" id="OAs-fG-bcE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ax-mf-zv8">
+                                <mutableString key="text">na verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuadona verdade essa label e um texto enormamente grande tudo vai ficar zuado</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yqY-fa-tcO"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Ax-mf-zv8" secondAttribute="trailing" constant="24" id="2yv-eo-X4g"/>
+                            <constraint firstItem="yqY-fa-tcO" firstAttribute="centerX" secondItem="MX9-Ye-iS9" secondAttribute="centerX" id="4OE-04-i8S"/>
+                            <constraint firstItem="yqY-fa-tcO" firstAttribute="height" secondItem="MX9-Ye-iS9" secondAttribute="height" id="Cgi-tR-GNe"/>
+                            <constraint firstItem="MX9-Ye-iS9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2Ax-mf-zv8" secondAttribute="bottom" constant="8" id="Cqc-my-C4L"/>
+                            <constraint firstItem="yqY-fa-tcO" firstAttribute="top" secondItem="MX9-Ye-iS9" secondAttribute="bottom" priority="750" constant="27" id="Dyf-v8-egk"/>
+                            <constraint firstItem="yqY-fa-tcO" firstAttribute="width" secondItem="MX9-Ye-iS9" secondAttribute="width" id="Qb6-uK-xgV"/>
+                            <constraint firstItem="MX9-Ye-iS9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Swj-Pc-bCl"/>
+                            <constraint firstItem="yqY-fa-tcO" firstAttribute="centerY" secondItem="MX9-Ye-iS9" secondAttribute="centerY" priority="250" id="aBN-XD-bNV"/>
+                            <constraint firstItem="E7q-Vy-D3N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c6P-oi-VZt"/>
+                            <constraint firstAttribute="bottom" secondItem="ycX-Cr-6EN" secondAttribute="bottom" constant="20" symbolic="YES" id="i1V-84-6Qx"/>
+                            <constraint firstItem="E7q-Vy-D3N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="oNt-BZ-Bt8"/>
+                            <constraint firstItem="2Ax-mf-zv8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="qj5-gK-153"/>
+                            <constraint firstItem="ycX-Cr-6EN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rpN-Y6-rMs"/>
+                            <constraint firstItem="2Ax-mf-zv8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="rzA-Qy-oDo"/>
+                            <constraint firstItem="MX9-Ye-iS9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yZW-Qo-1nu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonView" destination="MX9-Ye-iS9" id="Tfc-C7-kke"/>
+                        <outlet property="constraintButton" destination="Swj-Pc-bCl" id="5q9-X5-Qm9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--My Scroll View Controller-->
+        <scene sceneID="736-VB-D2v">
+            <objects>
+                <viewController id="RFH-gd-Kg3" customClass="MyScrollViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s5F-XX-a5w"/>
+                        <viewControllerLayoutGuide type="bottom" id="F0s-r9-nno"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qbj-w0-fUj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nog-NJ-S8V"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F0s-r9-nno" firstAttribute="top" secondItem="nog-NJ-S8V" secondAttribute="bottom" id="EEX-eo-W7Y"/>
+                            <constraint firstItem="nog-NJ-S8V" firstAttribute="top" secondItem="s5F-XX-a5w" secondAttribute="bottom" id="Fw3-Vk-sAw"/>
+                            <constraint firstAttribute="trailing" secondItem="nog-NJ-S8V" secondAttribute="trailing" id="MNC-qK-ey9"/>
+                            <constraint firstItem="nog-NJ-S8V" firstAttribute="leading" secondItem="qbj-w0-fUj" secondAttribute="leading" id="NfQ-no-D4P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myScroll" destination="nog-NJ-S8V" id="rSs-bU-CuW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fpt-zQ-4y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="122"/>
+        </scene>
+    </scenes>
+</document>
