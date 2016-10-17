@@ -8,6 +8,6 @@
 
 #import "ViewController.h"
 
-@interface MyScrollViewController : ViewController
+@interface MyScrollViewController : ViewController <UIScrollViewDelegate>
 
 @end
