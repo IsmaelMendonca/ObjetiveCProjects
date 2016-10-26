@@ -30,7 +30,7 @@
     
     __weak typeof(self) weakSelf = self;
     
-    [UIView animateWithDuration:5 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         [weakSelf.view layoutIfNeeded];
     }];
 }

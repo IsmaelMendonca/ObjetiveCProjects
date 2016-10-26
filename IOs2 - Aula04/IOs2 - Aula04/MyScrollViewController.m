@@ -10,7 +10,7 @@
 
 @interface MyScrollViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *myScroll;
-
+@property (nonatomic) UIImageView *imageV;
 @end
 
 @implementation MyScrollViewController
@@ -42,14 +42,26 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             UIImageView *iv = [[UIImageView alloc] initWithImage:image];
             [iv sizeToFit];
+            self.imageV = iv;
             [weakSelf.myScroll setContentSize:image.size];
             [weakSelf.myScroll addSubview:iv];
             
+            weakSelf.myScroll.scrollEnabled = YES;
+            
+            weakSelf.myScroll.minimumZoomScale = 0.1;
+            weakSelf.myScroll.maximumZoomScale = 2.0;
+            weakSelf.myScroll.delegate = weakSelf;
+            
             [weakSelf setTitle:@"Mountain"];
+            
+            [weakSelf.myScroll setZoomScale:0.1];
         });
     });
 }
 
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    return  self.imageV;
+}
 /*
 #pragma mark - Navigation
 
