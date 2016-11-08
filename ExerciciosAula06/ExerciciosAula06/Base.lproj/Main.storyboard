@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HU7-1N-J0c">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="h06-qW-flH">
+            <objects>
+                <tabBarController id="HU7-1N-J0c" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="HLe-bE-w7M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Jfm-w4-9QV" kind="relationship" relationship="viewControllers" id="oem-lu-ceY"/>
+                        <segue destination="52k-6a-AjT" kind="relationship" relationship="viewControllers" id="1Rh-oW-GHA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6s-WP-NdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="-32"/>
+        </scene>
+        <!--Instagram Table View Controller-->
+        <scene sceneID="Dyr-gY-FXn">
+            <objects>
+                <tableViewController id="0i9-xy-sZi" customClass="InstagramTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="H9T-vU-KAM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Mtg-jX-6Au">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mtg-jX-6Au" id="BLl-un-urH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0i9-xy-sZi" id="79N-59-CvY"/>
+                            <outlet property="delegate" destination="0i9-xy-sZi" id="p6u-YS-eNw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="NYf-wz-mll"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TIa-G4-MdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="-343.17841079460271"/>
+        </scene>
+        <!--Instagram-->
+        <scene sceneID="9gB-fd-mbb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jfm-w4-9QV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Instagram" image="instagram" id="7ug-zV-vHA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lj3-0s-TI9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0i9-xy-sZi" kind="relationship" relationship="rootViewController" id="iBy-F1-D5I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75b-cM-4nU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728.79999999999995" y="-343.17841079460271"/>
+        </scene>
+        <!--Facebook Table View Controller-->
+        <scene sceneID="TX4-WW-WMx">
+            <objects>
+                <tableViewController id="say-p3-9gA" customClass="FacebookTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="VF3-OM-9Hc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="h4r-ne-KOQ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h4r-ne-KOQ" id="sjY-Mq-7tN">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="say-p3-9gA" id="bcj-AK-TwJ"/>
+                            <outlet property="delegate" destination="say-p3-9gA" id="Fs5-4G-MTB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="3nk-i4-GmJ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9k-xu-aRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="338.68065967016497"/>
+        </scene>
+        <!--Facebook-->
+        <scene sceneID="zFB-eN-FVF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="52k-6a-AjT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Facebook" image="facebook" id="V3x-7r-0PQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MM0-j2-qkz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="say-p3-9gA" kind="relationship" relationship="rootViewController" id="iPs-Xs-vgy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sK1-Ob-zhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728.79999999999995" y="338.68065967016497"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook" width="32" height="32"/>
+        <image name="instagram" width="30" height="30"/>
+    </resources>
+</document>
