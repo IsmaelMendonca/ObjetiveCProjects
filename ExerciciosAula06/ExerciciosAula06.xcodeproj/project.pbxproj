@@ -20,6 +20,9 @@
 		FC2254011DD1E6FA0089B553 /* FacebookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2254001DD1E6FA0089B553 /* FacebookTableViewController.m */; };
 		FC2254051DD1E7130089B553 /* FacebookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2254031DD1E7130089B553 /* FacebookTableViewCell.m */; };
 		FC2254061DD1E7130089B553 /* FacebookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2254041DD1E7130089B553 /* FacebookTableViewCell.xib */; };
+		FC6212D91DD33C1500CE3A6D /* TwitterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6212D81DD33C1500CE3A6D /* TwitterTableViewController.m */; };
+		FC6212E21DD33C9200CE3A6D /* TwitterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6212E01DD33C9200CE3A6D /* TwitterTableViewCell.m */; };
+		FC6212E31DD33C9200CE3A6D /* TwitterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6212E11DD33C9200CE3A6D /* TwitterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,11 @@
 		FC2254021DD1E7130089B553 /* FacebookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookTableViewCell.h; sourceTree = "<group>"; };
 		FC2254031DD1E7130089B553 /* FacebookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookTableViewCell.m; sourceTree = "<group>"; };
 		FC2254041DD1E7130089B553 /* FacebookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookTableViewCell.xib; sourceTree = "<group>"; };
+		FC6212D71DD33C1500CE3A6D /* TwitterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTableViewController.h; sourceTree = "<group>"; };
+		FC6212D81DD33C1500CE3A6D /* TwitterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTableViewController.m; sourceTree = "<group>"; };
+		FC6212DF1DD33C9200CE3A6D /* TwitterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTableViewCell.h; sourceTree = "<group>"; };
+		FC6212E01DD33C9200CE3A6D /* TwitterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTableViewCell.m; sourceTree = "<group>"; };
+		FC6212E11DD33C9200CE3A6D /* TwitterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,11 @@
 				FC2254021DD1E7130089B553 /* FacebookTableViewCell.h */,
 				FC2254031DD1E7130089B553 /* FacebookTableViewCell.m */,
 				FC2254041DD1E7130089B553 /* FacebookTableViewCell.xib */,
+				FC6212D71DD33C1500CE3A6D /* TwitterTableViewController.h */,
+				FC6212D81DD33C1500CE3A6D /* TwitterTableViewController.m */,
+				FC6212DF1DD33C9200CE3A6D /* TwitterTableViewCell.h */,
+				FC6212E01DD33C9200CE3A6D /* TwitterTableViewCell.m */,
+				FC6212E11DD33C9200CE3A6D /* TwitterTableViewCell.xib */,
 			);
 			path = ExerciciosAula06;
 			sourceTree = "<group>";
@@ -167,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2253FB1DD0A3900089B553 /* InstagramTableViewCell.xib in Resources */,
+				FC6212E31DD33C9200CE3A6D /* TwitterTableViewCell.xib in Resources */,
 				FC2253EB1DD09E600089B553 /* LaunchScreen.storyboard in Resources */,
 				FC2253E81DD09E600089B553 /* Assets.xcassets in Resources */,
 				FC2253E31DD09E600089B553 /* Main.storyboard in Resources */,
@@ -182,6 +196,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2253E61DD09E600089B553 /* ExerciciosAula06.xcdatamodeld in Sources */,
+				FC6212E21DD33C9200CE3A6D /* TwitterTableViewCell.m in Sources */,
+				FC6212D91DD33C1500CE3A6D /* TwitterTableViewController.m in Sources */,
 				FC2253E01DD09E600089B553 /* ViewController.m in Sources */,
 				FC2253FA1DD0A3900089B553 /* InstagramTableViewCell.m in Sources */,
 				FC2254011DD1E6FA0089B553 /* FacebookTableViewController.m in Sources */,
@@ -345,6 +361,7 @@
 				FC2253F11DD09E600089B553 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
