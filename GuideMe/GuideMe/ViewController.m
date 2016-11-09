@@ -48,4 +48,17 @@
     [[button layer] setBorderWidth:2.0f];
     [[button layer] setBorderColor:[UIColor blueColor].CGColor];
 }
+
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+    for (CALayer *layer in self.view.layer.sublayers) {
+        if([layer isKindOfClass:[CAGradientLayer class]]){
+            layer.frame = self.view.bounds;
+            [self.view.layer displayIfNeeded];
+        }
+    }
+    
+}
 @end
