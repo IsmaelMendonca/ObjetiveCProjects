@@ -21,8 +21,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [ViewController setGradientBackground : self];
-    
-    [ViewController setButtonBorder:self.tutorialButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,13 +38,14 @@
     theViewGradient.colors = [NSArray arrayWithObjects: (id)topColor.CGColor, (id)bottomColor.CGColor, nil];
     theViewGradient.frame = viewController.view.bounds;
     
+    [theViewGradient setName:@"Background"];
+    
     //Add gradient to view
+    CALayer *layerToRemove = [[[viewController.view.layer sublayers] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"name == %@", @"Background"]] firstObject];
+    
+    [layerToRemove removeFromSuperlayer];
+    
     [viewController.view.layer insertSublayer:theViewGradient atIndex:0];
-}
-
-+(void) setButtonBorder : (UIButton *) button{
-    [[button layer] setBorderWidth:2.0f];
-    [[button layer] setBorderColor:[UIColor blueColor].CGColor];
 }
 
 -(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
@@ -60,5 +59,26 @@
         }
     }
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(orientationChanged:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIDeviceOrientationDidChangeNotification
+                                                  object:nil];
+}
+
+- (void) orientationChanged: (NSNotification *) sender {
+    [ViewController setGradientBackground : self];
 }
 @end
