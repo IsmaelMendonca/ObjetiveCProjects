@@ -19,6 +19,10 @@
 		802189F51D89B0B100985597 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189F41D89B0B100985597 /* LoginViewController.m */; };
 		802189F81D89BAE900985597 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189F71D89BAE900985597 /* ContactsTableViewController.m */; };
 		802189FB1D89BC5900985597 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189FA1D89BC5900985597 /* UserModel.m */; };
+		83D22C1D1DFF64A3003E8DD8 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D22C161DFF64A3003E8DD8 /* User+CoreDataClass.m */; };
+		83D22C1E1DFF64A3003E8DD8 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D22C181DFF64A3003E8DD8 /* User+CoreDataProperties.m */; };
+		83D22C1F1DFF64A3003E8DD8 /* Contact+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D22C1A1DFF64A3003E8DD8 /* Contact+CoreDataClass.m */; };
+		83D22C201DFF64A3003E8DD8 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D22C1C1DFF64A3003E8DD8 /* Contact+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,14 @@
 		802189F71D89BAE900985597 /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		802189F91D89BC5900985597 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		802189FA1D89BC5900985597 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		83D22C151DFF64A3003E8DD8 /* User+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataClass.h"; path = "GuideMe/User+CoreDataClass.h"; sourceTree = "<group>"; };
+		83D22C161DFF64A3003E8DD8 /* User+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataClass.m"; path = "GuideMe/User+CoreDataClass.m"; sourceTree = "<group>"; };
+		83D22C171DFF64A3003E8DD8 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "GuideMe/User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		83D22C181DFF64A3003E8DD8 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "GuideMe/User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		83D22C191DFF64A3003E8DD8 /* Contact+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataClass.h"; path = "GuideMe/Contact+CoreDataClass.h"; sourceTree = "<group>"; };
+		83D22C1A1DFF64A3003E8DD8 /* Contact+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataClass.m"; path = "GuideMe/Contact+CoreDataClass.m"; sourceTree = "<group>"; };
+		83D22C1B1DFF64A3003E8DD8 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataProperties.h"; path = "GuideMe/Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
+		83D22C1C1DFF64A3003E8DD8 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataProperties.m"; path = "GuideMe/Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,7 @@
 		573189F31D5BEAF500FC3F5C = {
 			isa = PBXGroup;
 			children = (
+				83D22C141DFF6449003E8DD8 /* Entities */,
 				573189FE1D5BEAF500FC3F5C /* GuideMe */,
 				573189FD1D5BEAF500FC3F5C /* Products */,
 			);
@@ -107,6 +120,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		83D22C141DFF6449003E8DD8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				83D22C151DFF64A3003E8DD8 /* User+CoreDataClass.h */,
+				83D22C161DFF64A3003E8DD8 /* User+CoreDataClass.m */,
+				83D22C171DFF64A3003E8DD8 /* User+CoreDataProperties.h */,
+				83D22C181DFF64A3003E8DD8 /* User+CoreDataProperties.m */,
+				83D22C191DFF64A3003E8DD8 /* Contact+CoreDataClass.h */,
+				83D22C1A1DFF64A3003E8DD8 /* Contact+CoreDataClass.m */,
+				83D22C1B1DFF64A3003E8DD8 /* Contact+CoreDataProperties.h */,
+				83D22C1C1DFF64A3003E8DD8 /* Contact+CoreDataProperties.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +166,7 @@
 				TargetAttributes = {
 					573189FB1D5BEAF500FC3F5C = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -179,13 +208,17 @@
 			files = (
 				802189F21D89B02600985597 /* HelpMeTwoViewController.m in Sources */,
 				57318A0D1D5BEAF500FC3F5C /* GuideMe.xcdatamodeld in Sources */,
+				83D22C1F1DFF64A3003E8DD8 /* Contact+CoreDataClass.m in Sources */,
 				57318A071D5BEAF500FC3F5C /* ViewController.m in Sources */,
 				57318A041D5BEAF500FC3F5C /* AppDelegate.m in Sources */,
+				83D22C201DFF64A3003E8DD8 /* Contact+CoreDataProperties.m in Sources */,
+				83D22C1D1DFF64A3003E8DD8 /* User+CoreDataClass.m in Sources */,
 				802189F51D89B0B100985597 /* LoginViewController.m in Sources */,
 				57318A011D5BEAF500FC3F5C /* main.m in Sources */,
 				802189F81D89BAE900985597 /* ContactsTableViewController.m in Sources */,
 				576C41361D5C037D004DC23C /* HelpMeOneViewController.m in Sources */,
 				802189FB1D89BC5900985597 /* UserModel.m in Sources */,
+				83D22C1E1DFF64A3003E8DD8 /* User+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,10 +332,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GuideMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.aluno.GuideMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -310,10 +346,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GuideMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.aluno.GuideMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
