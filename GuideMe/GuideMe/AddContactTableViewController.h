@@ -1,13 +1,13 @@
 //
-//  User+CoreDataClass.m
+//  AddContactTableViewController.h
 //  GuideMe
 //
 //  Created by Ismael Felix Mendonça on 27/12/16.
 //  Copyright © 2016 ALUNO. All rights reserved.
 //
 
-#import "User+CoreDataClass.h"
-#import "Contact+CoreDataClass.h"
-@implementation User
+#import <UIKit/UIKit.h>
+
+@interface AddContactTableViewController : UITableViewController
 
 @end

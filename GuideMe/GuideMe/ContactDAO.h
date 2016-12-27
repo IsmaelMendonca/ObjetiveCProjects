@@ -1,13 +1,15 @@
 //
-//  User+CoreDataClass.m
+//  ContactDAO.h
 //  GuideMe
 //
 //  Created by Ismael Felix Mendonça on 27/12/16.
 //  Copyright © 2016 ALUNO. All rights reserved.
 //
 
-#import "User+CoreDataClass.h"
+#import <Foundation/Foundation.h>
 #import "Contact+CoreDataClass.h"
-@implementation User
+#import "AppDelegate.h"
+
+@interface ContactDAO : NSObject
 
 @end

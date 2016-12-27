@@ -19,10 +19,13 @@
 		802189F51D89B0B100985597 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189F41D89B0B100985597 /* LoginViewController.m */; };
 		802189F81D89BAE900985597 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189F71D89BAE900985597 /* ContactsTableViewController.m */; };
 		802189FB1D89BC5900985597 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189FA1D89BC5900985597 /* UserModel.m */; };
-		83D22C1D1DFF64A3003E8DD8 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D22C161DFF64A3003E8DD8 /* User+CoreDataClass.m */; };
-		83D22C1E1DFF64A3003E8DD8 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D22C181DFF64A3003E8DD8 /* User+CoreDataProperties.m */; };
-		83D22C1F1DFF64A3003E8DD8 /* Contact+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D22C1A1DFF64A3003E8DD8 /* Contact+CoreDataClass.m */; };
-		83D22C201DFF64A3003E8DD8 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D22C1C1DFF64A3003E8DD8 /* Contact+CoreDataProperties.m */; };
+		FC6098951E12C10E005AA3B1 /* ContactDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6098941E12C10E005AA3B1 /* ContactDAO.m */; };
+		FC6098991E12C541005AA3B1 /* AlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6098981E12C541005AA3B1 /* AlertUtil.m */; };
+		FC6098A21E12D524005AA3B1 /* Contact+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60989B1E12D524005AA3B1 /* Contact+CoreDataClass.m */; };
+		FC6098A31E12D524005AA3B1 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60989D1E12D524005AA3B1 /* Contact+CoreDataProperties.m */; };
+		FC6098A41E12D524005AA3B1 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60989F1E12D524005AA3B1 /* User+CoreDataClass.m */; };
+		FC6098A51E12D524005AA3B1 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6098A11E12D524005AA3B1 /* User+CoreDataProperties.m */; };
+		FC6098A81E12D7B2005AA3B1 /* AddContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6098A71E12D7B2005AA3B1 /* AddContactTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,14 +50,20 @@
 		802189F71D89BAE900985597 /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		802189F91D89BC5900985597 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		802189FA1D89BC5900985597 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
-		83D22C151DFF64A3003E8DD8 /* User+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataClass.h"; path = "GuideMe/User+CoreDataClass.h"; sourceTree = "<group>"; };
-		83D22C161DFF64A3003E8DD8 /* User+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataClass.m"; path = "GuideMe/User+CoreDataClass.m"; sourceTree = "<group>"; };
-		83D22C171DFF64A3003E8DD8 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "GuideMe/User+CoreDataProperties.h"; sourceTree = "<group>"; };
-		83D22C181DFF64A3003E8DD8 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "GuideMe/User+CoreDataProperties.m"; sourceTree = "<group>"; };
-		83D22C191DFF64A3003E8DD8 /* Contact+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataClass.h"; path = "GuideMe/Contact+CoreDataClass.h"; sourceTree = "<group>"; };
-		83D22C1A1DFF64A3003E8DD8 /* Contact+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataClass.m"; path = "GuideMe/Contact+CoreDataClass.m"; sourceTree = "<group>"; };
-		83D22C1B1DFF64A3003E8DD8 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataProperties.h"; path = "GuideMe/Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
-		83D22C1C1DFF64A3003E8DD8 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataProperties.m"; path = "GuideMe/Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FC6098931E12C10E005AA3B1 /* ContactDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactDAO.h; path = GuideMe/ContactDAO.h; sourceTree = "<group>"; };
+		FC6098941E12C10E005AA3B1 /* ContactDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactDAO.m; path = GuideMe/ContactDAO.m; sourceTree = "<group>"; };
+		FC6098971E12C541005AA3B1 /* AlertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertUtil.h; sourceTree = "<group>"; };
+		FC6098981E12C541005AA3B1 /* AlertUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertUtil.m; sourceTree = "<group>"; };
+		FC60989A1E12D524005AA3B1 /* Contact+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataClass.h"; path = "GuideMe/Contact+CoreDataClass.h"; sourceTree = "<group>"; };
+		FC60989B1E12D524005AA3B1 /* Contact+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataClass.m"; path = "GuideMe/Contact+CoreDataClass.m"; sourceTree = "<group>"; };
+		FC60989C1E12D524005AA3B1 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataProperties.h"; path = "GuideMe/Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FC60989D1E12D524005AA3B1 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataProperties.m"; path = "GuideMe/Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FC60989E1E12D524005AA3B1 /* User+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataClass.h"; path = "GuideMe/User+CoreDataClass.h"; sourceTree = "<group>"; };
+		FC60989F1E12D524005AA3B1 /* User+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataClass.m"; path = "GuideMe/User+CoreDataClass.m"; sourceTree = "<group>"; };
+		FC6098A01E12D524005AA3B1 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "GuideMe/User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FC6098A11E12D524005AA3B1 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "GuideMe/User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FC6098A61E12D7B2005AA3B1 /* AddContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactTableViewController.h; sourceTree = "<group>"; };
+		FC6098A71E12D7B2005AA3B1 /* AddContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +80,6 @@
 		573189F31D5BEAF500FC3F5C = {
 			isa = PBXGroup;
 			children = (
-				83D22C141DFF6449003E8DD8 /* Entities */,
 				573189FE1D5BEAF500FC3F5C /* GuideMe */,
 				573189FD1D5BEAF500FC3F5C /* Products */,
 			);
@@ -88,6 +96,8 @@
 		573189FE1D5BEAF500FC3F5C /* GuideMe */ = {
 			isa = PBXGroup;
 			children = (
+				FC6098961E12C50D005AA3B1 /* Utils */,
+				83D22C141DFF6449003E8DD8 /* Entities */,
 				57318A021D5BEAF500FC3F5C /* AppDelegate.h */,
 				57318A031D5BEAF500FC3F5C /* AppDelegate.m */,
 				57318A051D5BEAF500FC3F5C /* ViewController.h */,
@@ -108,6 +118,8 @@
 				802189F71D89BAE900985597 /* ContactsTableViewController.m */,
 				802189F91D89BC5900985597 /* UserModel.h */,
 				802189FA1D89BC5900985597 /* UserModel.m */,
+				FC6098A61E12D7B2005AA3B1 /* AddContactTableViewController.h */,
+				FC6098A71E12D7B2005AA3B1 /* AddContactTableViewController.m */,
 			);
 			path = GuideMe;
 			sourceTree = "<group>";
@@ -123,16 +135,36 @@
 		83D22C141DFF6449003E8DD8 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				83D22C151DFF64A3003E8DD8 /* User+CoreDataClass.h */,
-				83D22C161DFF64A3003E8DD8 /* User+CoreDataClass.m */,
-				83D22C171DFF64A3003E8DD8 /* User+CoreDataProperties.h */,
-				83D22C181DFF64A3003E8DD8 /* User+CoreDataProperties.m */,
-				83D22C191DFF64A3003E8DD8 /* Contact+CoreDataClass.h */,
-				83D22C1A1DFF64A3003E8DD8 /* Contact+CoreDataClass.m */,
-				83D22C1B1DFF64A3003E8DD8 /* Contact+CoreDataProperties.h */,
-				83D22C1C1DFF64A3003E8DD8 /* Contact+CoreDataProperties.m */,
+				FC60989A1E12D524005AA3B1 /* Contact+CoreDataClass.h */,
+				FC60989B1E12D524005AA3B1 /* Contact+CoreDataClass.m */,
+				FC60989C1E12D524005AA3B1 /* Contact+CoreDataProperties.h */,
+				FC60989D1E12D524005AA3B1 /* Contact+CoreDataProperties.m */,
+				FC60989E1E12D524005AA3B1 /* User+CoreDataClass.h */,
+				FC60989F1E12D524005AA3B1 /* User+CoreDataClass.m */,
+				FC6098A01E12D524005AA3B1 /* User+CoreDataProperties.h */,
+				FC6098A11E12D524005AA3B1 /* User+CoreDataProperties.m */,
+				FC6098921E12C0DB005AA3B1 /* DAO */,
 			);
 			name = Entities;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FC6098921E12C0DB005AA3B1 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				FC6098931E12C10E005AA3B1 /* ContactDAO.h */,
+				FC6098941E12C10E005AA3B1 /* ContactDAO.m */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		FC6098961E12C50D005AA3B1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FC6098971E12C541005AA3B1 /* AlertUtil.h */,
+				FC6098981E12C541005AA3B1 /* AlertUtil.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,19 +238,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6098A51E12D524005AA3B1 /* User+CoreDataProperties.m in Sources */,
 				802189F21D89B02600985597 /* HelpMeTwoViewController.m in Sources */,
+				FC6098951E12C10E005AA3B1 /* ContactDAO.m in Sources */,
+				FC6098A21E12D524005AA3B1 /* Contact+CoreDataClass.m in Sources */,
+				FC6098991E12C541005AA3B1 /* AlertUtil.m in Sources */,
 				57318A0D1D5BEAF500FC3F5C /* GuideMe.xcdatamodeld in Sources */,
-				83D22C1F1DFF64A3003E8DD8 /* Contact+CoreDataClass.m in Sources */,
+				FC6098A81E12D7B2005AA3B1 /* AddContactTableViewController.m in Sources */,
+				FC6098A31E12D524005AA3B1 /* Contact+CoreDataProperties.m in Sources */,
 				57318A071D5BEAF500FC3F5C /* ViewController.m in Sources */,
 				57318A041D5BEAF500FC3F5C /* AppDelegate.m in Sources */,
-				83D22C201DFF64A3003E8DD8 /* Contact+CoreDataProperties.m in Sources */,
-				83D22C1D1DFF64A3003E8DD8 /* User+CoreDataClass.m in Sources */,
 				802189F51D89B0B100985597 /* LoginViewController.m in Sources */,
 				57318A011D5BEAF500FC3F5C /* main.m in Sources */,
+				FC6098A41E12D524005AA3B1 /* User+CoreDataClass.m in Sources */,
 				802189F81D89BAE900985597 /* ContactsTableViewController.m in Sources */,
 				576C41361D5C037D004DC23C /* HelpMeOneViewController.m in Sources */,
 				802189FB1D89BC5900985597 /* UserModel.m in Sources */,
-				83D22C1E1DFF64A3003E8DD8 /* User+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

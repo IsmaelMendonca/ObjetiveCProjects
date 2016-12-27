@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.m
 //  GuideMe
 //
-//  Created by ADMINISTRADOR on 12/12/16.
+//  Created by Ismael Felix Mendonça on 27/12/16.
 //  Copyright © 2016 ALUNO. All rights reserved.
 //
 
@@ -14,11 +14,11 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"User"];
 }
 
-@dynamic name;
-@dynamic phoneNumber;
-@dynamic email;
 @dynamic address;
 @dynamic birthday;
+@dynamic email;
+@dynamic name;
+@dynamic phoneNumber;
 @dynamic contacts;
 
 @end

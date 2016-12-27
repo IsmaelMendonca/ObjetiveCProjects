@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "ViewController.h"
+#import "AlertUtil.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userField;
@@ -35,13 +36,7 @@
         [self performSegueWithIdentifier:@"HomeSegueIdentifier" sender:self];
     }
     else {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Erro ao entrar!" message:@"Usuário e/ou Senha inválido." preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        
-        [alert addAction:actionOk];
-        
-        [self presentViewController:alert animated:YES completion:nil];
+        [AlertUtil showAlertIn:self WithTitle:@"Erro ao entrar!" AndMessage:@"Usuário e/ou Senha inválido."];
     }
     
     
