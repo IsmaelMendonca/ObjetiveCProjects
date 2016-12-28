@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ViewController.h"
 #import "AlertUtil.h"
+#import "ColorUtil.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userField;
@@ -24,6 +25,12 @@
     // Do any additional setup after loading the view.
     
     [ViewController setGradientBackground:self];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBar.barTintColor = [ColorUtil navigationBarBackground];
 }
 
 - (void)didReceiveMemoryWarning {

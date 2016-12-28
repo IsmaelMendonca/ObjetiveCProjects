@@ -8,6 +8,7 @@
 
 #import "ContactsTableViewController.h"
 #import "UserModel.h"
+#import "ColorUtil.h"
 
 @interface ContactsTableViewController ()
 @property (strong, nonatomic) NSMutableArray *users;
@@ -31,6 +32,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBar.barTintColor = [ColorUtil navigationBarTintColor];
 }
 
 - (void)didReceiveMemoryWarning {

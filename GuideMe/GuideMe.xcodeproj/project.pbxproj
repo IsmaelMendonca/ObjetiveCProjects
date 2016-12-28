@@ -26,6 +26,7 @@
 		FC6098A41E12D524005AA3B1 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60989F1E12D524005AA3B1 /* User+CoreDataClass.m */; };
 		FC6098A51E12D524005AA3B1 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6098A11E12D524005AA3B1 /* User+CoreDataProperties.m */; };
 		FC6098A81E12D7B2005AA3B1 /* AddContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6098A71E12D7B2005AA3B1 /* AddContactTableViewController.m */; };
+		FCAB27FC1E143205000909E0 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAB27FB1E143205000909E0 /* ColorUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		FC6098A11E12D524005AA3B1 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "GuideMe/User+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FC6098A61E12D7B2005AA3B1 /* AddContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactTableViewController.h; sourceTree = "<group>"; };
 		FC6098A71E12D7B2005AA3B1 /* AddContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactTableViewController.m; sourceTree = "<group>"; };
+		FCAB27FA1E143205000909E0 /* ColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtil.h; sourceTree = "<group>"; };
+		FCAB27FB1E143205000909E0 /* ColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 			children = (
 				FC6098971E12C541005AA3B1 /* AlertUtil.h */,
 				FC6098981E12C541005AA3B1 /* AlertUtil.m */,
+				FCAB27FA1E143205000909E0 /* ColorUtil.h */,
+				FCAB27FB1E143205000909E0 /* ColorUtil.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				57318A0D1D5BEAF500FC3F5C /* GuideMe.xcdatamodeld in Sources */,
 				FC6098A81E12D7B2005AA3B1 /* AddContactTableViewController.m in Sources */,
 				FC6098A31E12D524005AA3B1 /* Contact+CoreDataProperties.m in Sources */,
+				FCAB27FC1E143205000909E0 /* ColorUtil.m in Sources */,
 				57318A071D5BEAF500FC3F5C /* ViewController.m in Sources */,
 				57318A041D5BEAF500FC3F5C /* AppDelegate.m in Sources */,
 				802189F51D89B0B100985597 /* LoginViewController.m in Sources */,

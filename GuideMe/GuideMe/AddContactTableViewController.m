@@ -7,8 +7,12 @@
 //
 
 #import "AddContactTableViewController.h"
+#import "ColorUtil.h"
+@import MobileCoreServices;
+@import Photos;
 
-@interface AddContactTableViewController ()
+@interface AddContactTableViewController () <UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIGestureRecognizerDelegate>
+@property (weak, nonatomic) IBOutlet UITextView *contactDescription;
 
 @end
 
@@ -22,6 +26,54 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.contactDescription.layer.cornerRadius = 9;
+    
+    self.contactDescription.layer.borderColor = [ColorUtil textFieldBorderColor].CGColor;
+    
+    self.contactDescription.layer.borderWidth = 1;
+    
+    self.contactDescription.textColor = [ColorUtil textFieldTextColor];
+    
+    self.profileImage.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapRecognizerImage:)];
+    
+    [self.profileImage addGestureRecognizer:tapGesture];
+}
+
+-(IBAction)tapRecognizerImage:(id) sender {
+    UIAlertController * alert=   [UIAlertController
+                                 alertControllerWithTitle:@"Adicionar Foto"
+                                 message:@"Selecione como deseja adicionar a foto"
+                                 preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction* pickerFromAlbum = [UIAlertAction
+                         actionWithTitle:@"Álbum"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action)
+                         {
+                                 UIImagePickerController *picker = [UIImagePickerController new];
+                                 [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+                                 [picker setDelegate:self];
+                             
+                                 [self presentViewController:picker animated:YES completion:nil];
+                             
+                             [alert dismissViewControllerAnimated:YES completion:nil];
+                             
+                         }];
+    UIAlertAction* takePhoto = [UIAlertAction
+                             actionWithTitle:@"Câmera"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                             }];
+    
+    
+    [alert addAction:pickerFromAlbum];
+    [alert addAction:takePhoto];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,70 +81,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+-(BOOL)textViewShouldBeginEditing:(UITextView *)textView {
     
-    // Configure the cell...
+    self.contactDescription.textColor = [UIColor blackColor];
     
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
+    if([textView.text isEqualToString:@"Descrição do contato"]) {
+        textView.text = @"";
+    }
+    
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
+-(BOOL)textViewShouldEndEditing:(UITextView *)textView {
+    if([textView.text isEqualToString:@""]) {
+        textView.text = @"Descrição do contato";
+        self.contactDescription.textColor = [ColorUtil textFieldTextColor];
+    }
     return YES;
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    
+    [self.profileImage setImage:image];
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
-*/
-
 @end

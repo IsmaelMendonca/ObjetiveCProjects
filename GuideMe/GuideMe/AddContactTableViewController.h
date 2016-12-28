@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AddContactTableViewController : UITableViewController
-
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 @end
