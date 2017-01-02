@@ -1,22 +1,21 @@
 //
-//  ContactDAO.m
+//  UserDAO.m
 //  GuideMe
 //
-//  Created by Ismael Felix Mendonça on 27/12/16.
+//  Created by Ismael Felix Mendonça on 30/12/16.
 //  Copyright © 2016 ALUNO. All rights reserved.
 //
 
-#import "ContactDAO.h"
 #import "UserDAO.h"
 
-@implementation ContactDAO
+@implementation UserDAO
 
 //Retorna o contexto
 +(NSManagedObjectContext*)getContext{
     AppDelegate *delegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
     NSPersistentContainer *container = delegate.persistentContainer;
     NSManagedObjectContext *context = container.viewContext;
-    [context setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
+    [context setMergePolicy:NSErrorMergePolicy];
     
     return context;
 }
@@ -26,65 +25,40 @@
     
     NSError *saveError;
     
-    if (![context save:&saveError]) {
+    if (![context save:&saveError]) {  
         return NO;
     }
     
     return YES;
 }
 
-//Cria o objeto Contact
-+(Contact*)createContact {
-    Contact *contact = [NSEntityDescription insertNewObjectForEntityForName:@"Contact"
-                                                   inManagedObjectContext:[self getContext]];
-
+//Cria o objeto User
++(User*)createUser {
+    User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User"
+                                                     inManagedObjectContext:[self getContext]];
     
-    return contact;
+    return user;
 }
 
-+(BOOL)removeAndSaveContact: (Contact*) contact {
-    [[self getContext] deleteObject:contact];
++(BOOL)removeAndSaveUser:(User *)user {
+    [[self getContext] deleteObject:user];
     
-    if(contact.isDeleted){
+    if(user.isDeleted){
         [self saveContext];
     }
     
-    return contact.isDeleted;
+    return user.isDeleted;
 }
 
-+(NSArray*)fetchAllContacts {
-    //select * from Contact
++(NSArray*)fetchAllUsers {
+    //select * from User
     NSFetchRequest *fetch = [NSFetchRequest
-                          fetchRequestWithEntityName:@"Contact"];
-    
-    NSError *fetchError;
-    NSArray *result = [[self getContext] executeFetchRequest:fetch
-                                                error:&fetchError];
-    
-    if (fetchError) {
-        return nil;
-    }
-    
-    return result;
-}
-
-+(NSArray*) fetchByUser : (User*) user {
-    
-    NSFetchRequest *fetch = [NSFetchRequest
-                             fetchRequestWithEntityName:@"Contact"];
-    
-    // link do ❤️: http://nshipster.com/nspredicate/
-    [fetch setPredicate:
-     [NSPredicate predicateWithFormat:@"user.userName MATCHES %@", user.userName]];
+                             fetchRequestWithEntityName:@"User"];
     
     NSError *fetchError;
     NSArray *result = [[self getContext] executeFetchRequest:fetch
                                                        error:&fetchError];
     
-    // order by validade ASC
-    [fetch setSortDescriptors:
-     @[[NSSortDescriptor sortDescriptorWithKey:@"contactName" ascending:YES]]];
-    
     if (fetchError) {
         return nil;
     }
@@ -92,14 +66,33 @@
     return result;
 }
 
-+(BOOL) checkUniquePhoneNumber : (NSString*) phoneNumber ByUser : (User*) user {
-    
++(User*) fetchUserByUserName : (NSString*) userName AndPassword : (NSString*) password {
+    //select * from Produto
     NSFetchRequest *fetch = [NSFetchRequest
-                             fetchRequestWithEntityName:@"Contact"];
+                          fetchRequestWithEntityName:@"User"];
     
     // link do ❤️: http://nshipster.com/nspredicate/
     [fetch setPredicate:
-     [NSPredicate predicateWithFormat:@"contactPhoneNumber MATCHES %@ AND user.userName MATCHES %@", phoneNumber, user.userName]];
+     [NSPredicate predicateWithFormat:@"userName MATCHES %@ AND password MATCHES %@", userName, password]];
+    
+    NSError *fetchError;
+    NSArray *result = [[self getContext] executeFetchRequest:fetch
+                                                       error:&fetchError];
+    
+    if (fetchError) {
+        return nil;
+    }
+    
+    return (User*) [result firstObject];
+}
+
++(BOOL) checkUserName : (NSString*) userName {
+    NSFetchRequest *fetch = [NSFetchRequest
+                             fetchRequestWithEntityName:@"User"];
+    
+    // link do ❤️: http://nshipster.com/nspredicate/
+    [fetch setPredicate:
+     [NSPredicate predicateWithFormat:@"userName MATCHES %@", userName]];
     
     NSError *fetchError;
     NSArray *result = [[self getContext] executeFetchRequest:fetch

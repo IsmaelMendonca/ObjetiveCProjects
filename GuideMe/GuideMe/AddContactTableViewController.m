@@ -8,24 +8,32 @@
 
 #import "AddContactTableViewController.h"
 #import "ColorUtil.h"
+#import "AlertUtil.h"
+#import "ContactDAO.h"
+#import "SessionData.h"
 @import MobileCoreServices;
 @import Photos;
 
 @interface AddContactTableViewController () <UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *contactDescription;
+@property (weak, nonatomic) IBOutlet UITextField *contactName;
+@property (weak, nonatomic) IBOutlet UITextField *contactPhoneNumber;
+@property (weak, nonatomic) IBOutlet UISwitch *contactNotification;
+@property (weak, nonatomic) IBOutlet UITextField *contactEmail;
 
 @end
 
 @implementation AddContactTableViewController
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2.0;
+    self.profileImage.clipsToBounds = YES;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.contactDescription.layer.cornerRadius = 9;
     
@@ -53,11 +61,12 @@
                          style:UIAlertActionStyleDefault
                          handler:^(UIAlertAction * action)
                          {
-                                 UIImagePickerController *picker = [UIImagePickerController new];
-                                 [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-                                 [picker setDelegate:self];
+                             UIImagePickerController *picker = [UIImagePickerController new];
+                             [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
                              
-                                 [self presentViewController:picker animated:YES completion:nil];
+                             [picker setDelegate:self];
+                             
+                             [self presentViewController:picker animated:YES completion:nil];
                              
                              [alert dismissViewControllerAnimated:YES completion:nil];
                              
@@ -67,6 +76,13 @@
                              style:UIAlertActionStyleDefault
                              handler:^(UIAlertAction * action)
                              {
+                                 UIImagePickerController *picker = [UIImagePickerController new];
+                                 [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+                                 
+                                 [picker setDelegate:self];
+                                 
+                                 [self presentViewController:picker animated:YES completion:nil];
+                                 
                                  [alert dismissViewControllerAnimated:YES completion:nil];
                              }];
     
@@ -82,8 +98,8 @@
 }
 
 -(BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-    
     self.contactDescription.textColor = [UIColor blackColor];
+    self.contactDescription.layer.borderColor = [ColorUtil textFieldBorderColor].CGColor;
     
     if([textView.text isEqualToString:@"Descrição do contato"]) {
         textView.text = @"";
@@ -101,13 +117,74 @@
 }
 
 #pragma mark - UIImagePickerControllerDelegate
-- (void)imagePickerController:(UIImagePickerController *)picker
-didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    UIImage *image = (UIImage*) info[UIImagePickerControllerOriginalImage];
     
     [self.profileImage setImage:image];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)saveContact:(id)sender {
+    if (![self validateFields]) {
+        return;
+    }
+    SessionData* session = [SessionData sharedSessionData];
+    
+    if(!session.loggedUser) {
+        return;
+    }
+    
+    if(![ContactDAO checkUniquePhoneNumber:self.contactPhoneNumber.text ByUser:session.loggedUser]) {
+        [AlertUtil showAlertInTable:self WithTitle:@"Erro ao salvar!" AndMessage:@"Usuário logado já possui um contato com este número de telefone!"];
+        
+        return;
+    }
+    
+    Contact* contact = [ContactDAO createContact];
+    
+    [contact setContactDescription:self.contactDescription.text];
+    [contact setContactName:self.contactName.text];
+    [contact setContactEmail:self.contactEmail.text];
+    [contact setContactPhoneNumber:self.contactEmail.text];
+    [contact setContactNotification:[NSNumber numberWithBool:self.contactNotification.isOn]];
+    [contact setProfileImage:UIImagePNGRepresentation(self.profileImage.image)];
+    [contact setUser:session.loggedUser];
+    
+    if(![ContactDAO saveContext]) {
+        [AlertUtil showAlertInTable:self WithTitle:@"Erro!" AndMessage:@"Erro ao tentar salvar o Contato, por favor tente novamente!"];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(BOOL)validateFields {
+    if([[self.contactName.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]length] == 0) {
+        
+        [AlertUtil showAlertInTable:self WithTitle:@"Campo Vazio!" AndMessage:@"Campo NOME não pode ser vazio!"];
+        return false;
+    }
+    
+    if([[self.contactPhoneNumber.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]length] == 0) {
+        
+        [AlertUtil showAlertInTable:self WithTitle:@"Campo Vazio!" AndMessage:@"Campo TELEFONE não pode ser vazio!"];
+        return false;
+    }
+    
+    if([[self.contactEmail.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]length] == 0) {
+        
+        [AlertUtil showAlertInTable:self WithTitle:@"Campo Vazio!" AndMessage:@"Campo E-MAIL não pode ser vazio!"];
+        return false;
+    }
+    
+    if([self.contactDescription.text isEqualToString:@"Descrição do contato"]) {
+        
+        [AlertUtil showAlertInTable:self WithTitle:@"Campo Vazio!" AndMessage:@"Campo DESCRIÇÃO não pode ser vazio!"];
+        return false;
+    }
+
+    return true;
+}
+
 @end

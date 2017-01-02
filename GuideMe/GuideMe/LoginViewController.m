@@ -11,6 +11,8 @@
 #import "ViewController.h"
 #import "AlertUtil.h"
 #import "ColorUtil.h"
+#import "UserDAO.h"
+#import "SessionData.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userField;
@@ -31,6 +33,8 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.barTintColor = [ColorUtil navigationBarBackground];
+    self.userField.text = @"";
+    self.passwordField.text = @"";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,19 +49,20 @@
     else {
         [AlertUtil showAlertIn:self WithTitle:@"Erro ao entrar!" AndMessage:@"Usuário e/ou Senha inválido."];
     }
-    
+
     
 }
 
 -(BOOL) validateLoginData{
     
-    NSLog(@"%ld", (long)[self.userField.text compare:@"Admin"]);
+    User* user = [UserDAO fetchUserByUserName:self.userField.text AndPassword:self.passwordField.text];
+    SessionData *session = [SessionData sharedSessionData];
     
-    if([self.userField.text isEqualToString:@"Admin"] && [self.passwordField.text isEqualToString:@"Admin"])
-    {
+    if(user){
+        [session setLoggedUser:user];
         return YES;
     }
-    
+    [session setLoggedUser:nil];
     return NO;
 }
 

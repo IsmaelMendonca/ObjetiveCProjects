@@ -7,8 +7,11 @@
 //
 
 #import "ContactsTableViewController.h"
-#import "UserModel.h"
 #import "ColorUtil.h"
+#import "ContactDAO.h"
+#import "ContactsHeaderView.h"
+#import "ContactsCell.h"
+#import "SessionData.h"
 
 @interface ContactsTableViewController ()
 @property (strong, nonatomic) NSMutableArray *users;
@@ -20,24 +23,18 @@
     [super viewDidLoad];
     
     self.users = [[NSMutableArray alloc] init];
-    
-    UserModel* alan = [[UserModel alloc] initWithName:@"Alan" AndPhone:@"987865544" AndPhoto:@"alan"];
-    UserModel* ismael = [[UserModel alloc] initWithName:@"Ismael" AndPhone:@"97765454" AndPhoto:@"ismael"];
-    
-    [self.users addObject:alan];
-    [self.users addObject:ismael];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.barTintColor = [ColorUtil navigationBarTintColor];
+    
+    SessionData *session = [SessionData sharedSessionData];
+    
+    [self.users addObjectsFromArray: [ContactDAO fetchByUser:session.loggedUser]];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,66 +52,55 @@
     return [self.users count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCellIdentifier" forIndexPath:indexPath];
+    ContactsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactsCellIdentifier" forIndexPath:indexPath];
     
-    UILabel* labelName = (UILabel*)[cell viewWithTag:1];
-    UILabel* labelPhone = (UILabel*)[cell viewWithTag:2];
-    UIImageView* photoView = [(UIImageView*) cell viewWithTag:3];
+    Contact* contact = [self.users objectAtIndex:indexPath.row];
     
-    UserModel *user = [self.users objectAtIndex:indexPath.row];
+    if(contact == nil) {
+        return [UITableViewCell new];
+    }
     
-    labelName.text = user.name;
-    labelPhone.text = user.phone;
-    [photoView setImage:user.photo];
+    cell.contactNameLabel.text = contact.contactName;
+    cell.contactPhoneNumberLabel.text = contact.contactPhoneNumber;
+    cell.contactProfileImage.image = [UIImage imageWithData:contact.profileImage];
+    
+    cell.contactProfileImage.layer.cornerRadius = cell.contactProfileImage.frame.size.width / 2.0;
+    cell.contactProfileImage.clipsToBounds = YES;
     
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 90;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 200;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    ContactsHeaderView* headerView = [ContactsHeaderView new];
+    
+    SessionData* session = [SessionData sharedSessionData];
+    headerView.userProfileImage.image = [UIImage imageWithData:session.loggedUser.profileImage];
+    
+    headerView.userProfileImage.layer.cornerRadius = headerView.userProfileImage.frame.size.width / 2.0;
+    headerView.userProfileImage.clipsToBounds = YES;
+    
+    headerView.greetingsLabel.text = [NSString stringWithFormat:@"Bom dia %@", session.loggedUser.name];
+    
+    NSLocale* currentLocale = [NSLocale currentLocale];
+    
+    headerView.todayLabel.text = [[NSDate date] descriptionWithLocale:currentLocale];
+    
+    return headerView;
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (IBAction)logout:(id)sender {
+    SessionData* session = [SessionData sharedSessionData];
+    [session setLoggedUser:nil];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

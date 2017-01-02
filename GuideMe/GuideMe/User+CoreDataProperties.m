@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.m
 //  GuideMe
 //
-//  Created by Ismael Felix Mendonça on 27/12/16.
+//  Created by Ismael Felix Mendonça on 30/12/16.
 //  Copyright © 2016 ALUNO. All rights reserved.
 //
 
@@ -19,6 +19,9 @@
 @dynamic email;
 @dynamic name;
 @dynamic phoneNumber;
+@dynamic profileImage;
+@dynamic userName;
+@dynamic password;
 @dynamic contacts;
 
 @end

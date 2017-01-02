@@ -49,5 +49,7 @@
 	<false/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Precisamos do acesso ao Álbum você autoriza?</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Precisamos do acesso a Câmera você autoriza?</string>
 </dict>
 </plist>

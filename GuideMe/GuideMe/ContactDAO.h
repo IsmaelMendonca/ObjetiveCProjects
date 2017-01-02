@@ -11,5 +11,10 @@
 #import "AppDelegate.h"
 
 @interface ContactDAO : NSObject
-
++(BOOL)saveContext;
++(Contact*)createContact;
++(BOOL)removeAndSaveContact: (Contact*) contact;
++(NSArray*)fetchAllContacts;
++(BOOL) checkUniquePhoneNumber : (NSString*) phoneNumber ByUser : (User*) user;
++(NSArray*) fetchByUser : (User*) user;
 @end

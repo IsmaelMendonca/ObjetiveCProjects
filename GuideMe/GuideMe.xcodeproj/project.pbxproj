@@ -18,13 +18,18 @@
 		802189F21D89B02600985597 /* HelpMeTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189F11D89B02600985597 /* HelpMeTwoViewController.m */; };
 		802189F51D89B0B100985597 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189F41D89B0B100985597 /* LoginViewController.m */; };
 		802189F81D89BAE900985597 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189F71D89BAE900985597 /* ContactsTableViewController.m */; };
-		802189FB1D89BC5900985597 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189FA1D89BC5900985597 /* UserModel.m */; };
+		FC0A8D521E16C08B00146A42 /* ContactsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0A8D511E16C08B00146A42 /* ContactsHeaderView.xib */; };
+		FC0A8D551E16CFE900146A42 /* AddUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D541E16CFE900146A42 /* AddUserTableViewController.m */; };
+		FC0A8D581E16D70800146A42 /* UserDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D571E16D70800146A42 /* UserDAO.m */; };
+		FC0A8D6D1E16EA6A00146A42 /* Contact+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D661E16EA6A00146A42 /* Contact+CoreDataClass.m */; };
+		FC0A8D6E1E16EA6A00146A42 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D681E16EA6A00146A42 /* Contact+CoreDataProperties.m */; };
+		FC0A8D6F1E16EA6A00146A42 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D6A1E16EA6A00146A42 /* User+CoreDataClass.m */; };
+		FC0A8D701E16EA6A00146A42 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D6C1E16EA6A00146A42 /* User+CoreDataProperties.m */; };
+		FC0A8D741E19509C00146A42 /* SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D731E19509C00146A42 /* SessionData.m */; };
+		FC0EACDF1E16B5B800ACCA66 /* ContactsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0EACDE1E16B5B800ACCA66 /* ContactsHeaderView.m */; };
+		FC0EACE21E16BB2A00ACCA66 /* ContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0EACE11E16BB2A00ACCA66 /* ContactsCell.m */; };
 		FC6098951E12C10E005AA3B1 /* ContactDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6098941E12C10E005AA3B1 /* ContactDAO.m */; };
 		FC6098991E12C541005AA3B1 /* AlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6098981E12C541005AA3B1 /* AlertUtil.m */; };
-		FC6098A21E12D524005AA3B1 /* Contact+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60989B1E12D524005AA3B1 /* Contact+CoreDataClass.m */; };
-		FC6098A31E12D524005AA3B1 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60989D1E12D524005AA3B1 /* Contact+CoreDataProperties.m */; };
-		FC6098A41E12D524005AA3B1 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60989F1E12D524005AA3B1 /* User+CoreDataClass.m */; };
-		FC6098A51E12D524005AA3B1 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6098A11E12D524005AA3B1 /* User+CoreDataProperties.m */; };
 		FC6098A81E12D7B2005AA3B1 /* AddContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6098A71E12D7B2005AA3B1 /* AddContactTableViewController.m */; };
 		FCAB27FC1E143205000909E0 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAB27FB1E143205000909E0 /* ColorUtil.m */; };
 /* End PBXBuildFile section */
@@ -49,20 +54,29 @@
 		802189F41D89B0B100985597 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		802189F61D89BAE900985597 /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
 		802189F71D89BAE900985597 /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
-		802189F91D89BC5900985597 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		802189FA1D89BC5900985597 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		FC0A8D511E16C08B00146A42 /* ContactsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsHeaderView.xib; sourceTree = "<group>"; };
+		FC0A8D531E16CFE900146A42 /* AddUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserTableViewController.h; sourceTree = "<group>"; };
+		FC0A8D541E16CFE900146A42 /* AddUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserTableViewController.m; sourceTree = "<group>"; };
+		FC0A8D561E16D70800146A42 /* UserDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDAO.h; path = GuideMe/UserDAO.h; sourceTree = "<group>"; };
+		FC0A8D571E16D70800146A42 /* UserDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDAO.m; path = GuideMe/UserDAO.m; sourceTree = "<group>"; };
+		FC0A8D651E16EA6A00146A42 /* Contact+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataClass.h"; path = "GuideMe/Contact+CoreDataClass.h"; sourceTree = "<group>"; };
+		FC0A8D661E16EA6A00146A42 /* Contact+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataClass.m"; path = "GuideMe/Contact+CoreDataClass.m"; sourceTree = "<group>"; };
+		FC0A8D671E16EA6A00146A42 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataProperties.h"; path = "GuideMe/Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FC0A8D681E16EA6A00146A42 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataProperties.m"; path = "GuideMe/Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FC0A8D691E16EA6A00146A42 /* User+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataClass.h"; path = "GuideMe/User+CoreDataClass.h"; sourceTree = "<group>"; };
+		FC0A8D6A1E16EA6A00146A42 /* User+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataClass.m"; path = "GuideMe/User+CoreDataClass.m"; sourceTree = "<group>"; };
+		FC0A8D6B1E16EA6A00146A42 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "GuideMe/User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FC0A8D6C1E16EA6A00146A42 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "GuideMe/User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FC0A8D721E19509C00146A42 /* SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionData.h; sourceTree = "<group>"; };
+		FC0A8D731E19509C00146A42 /* SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionData.m; sourceTree = "<group>"; };
+		FC0EACDD1E16B5B800ACCA66 /* ContactsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsHeaderView.h; sourceTree = "<group>"; };
+		FC0EACDE1E16B5B800ACCA66 /* ContactsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsHeaderView.m; sourceTree = "<group>"; };
+		FC0EACE01E16BB2A00ACCA66 /* ContactsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsCell.h; sourceTree = "<group>"; };
+		FC0EACE11E16BB2A00ACCA66 /* ContactsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsCell.m; sourceTree = "<group>"; };
 		FC6098931E12C10E005AA3B1 /* ContactDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactDAO.h; path = GuideMe/ContactDAO.h; sourceTree = "<group>"; };
 		FC6098941E12C10E005AA3B1 /* ContactDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactDAO.m; path = GuideMe/ContactDAO.m; sourceTree = "<group>"; };
 		FC6098971E12C541005AA3B1 /* AlertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertUtil.h; sourceTree = "<group>"; };
 		FC6098981E12C541005AA3B1 /* AlertUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertUtil.m; sourceTree = "<group>"; };
-		FC60989A1E12D524005AA3B1 /* Contact+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataClass.h"; path = "GuideMe/Contact+CoreDataClass.h"; sourceTree = "<group>"; };
-		FC60989B1E12D524005AA3B1 /* Contact+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataClass.m"; path = "GuideMe/Contact+CoreDataClass.m"; sourceTree = "<group>"; };
-		FC60989C1E12D524005AA3B1 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataProperties.h"; path = "GuideMe/Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FC60989D1E12D524005AA3B1 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataProperties.m"; path = "GuideMe/Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
-		FC60989E1E12D524005AA3B1 /* User+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataClass.h"; path = "GuideMe/User+CoreDataClass.h"; sourceTree = "<group>"; };
-		FC60989F1E12D524005AA3B1 /* User+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataClass.m"; path = "GuideMe/User+CoreDataClass.m"; sourceTree = "<group>"; };
-		FC6098A01E12D524005AA3B1 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "GuideMe/User+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FC6098A11E12D524005AA3B1 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "GuideMe/User+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FC6098A61E12D7B2005AA3B1 /* AddContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactTableViewController.h; sourceTree = "<group>"; };
 		FC6098A71E12D7B2005AA3B1 /* AddContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactTableViewController.m; sourceTree = "<group>"; };
 		FCAB27FA1E143205000909E0 /* ColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtil.h; sourceTree = "<group>"; };
@@ -99,6 +113,7 @@
 		573189FE1D5BEAF500FC3F5C /* GuideMe */ = {
 			isa = PBXGroup;
 			children = (
+				FC0A8D711E19506D00146A42 /* Singletons */,
 				FC6098961E12C50D005AA3B1 /* Utils */,
 				83D22C141DFF6449003E8DD8 /* Entities */,
 				57318A021D5BEAF500FC3F5C /* AppDelegate.h */,
@@ -106,6 +121,10 @@
 				57318A051D5BEAF500FC3F5C /* ViewController.h */,
 				57318A061D5BEAF500FC3F5C /* ViewController.m */,
 				57318A081D5BEAF500FC3F5C /* Main.storyboard */,
+				FC0A8D531E16CFE900146A42 /* AddUserTableViewController.h */,
+				FC0A8D541E16CFE900146A42 /* AddUserTableViewController.m */,
+				FC0EACDD1E16B5B800ACCA66 /* ContactsHeaderView.h */,
+				FC0EACDE1E16B5B800ACCA66 /* ContactsHeaderView.m */,
 				57318A0E1D5BEAF500FC3F5C /* Assets.xcassets */,
 				57318A101D5BEAF500FC3F5C /* LaunchScreen.storyboard */,
 				57318A131D5BEAF500FC3F5C /* Info.plist */,
@@ -119,10 +138,11 @@
 				802189F41D89B0B100985597 /* LoginViewController.m */,
 				802189F61D89BAE900985597 /* ContactsTableViewController.h */,
 				802189F71D89BAE900985597 /* ContactsTableViewController.m */,
-				802189F91D89BC5900985597 /* UserModel.h */,
-				802189FA1D89BC5900985597 /* UserModel.m */,
 				FC6098A61E12D7B2005AA3B1 /* AddContactTableViewController.h */,
 				FC6098A71E12D7B2005AA3B1 /* AddContactTableViewController.m */,
+				FC0EACE01E16BB2A00ACCA66 /* ContactsCell.h */,
+				FC0EACE11E16BB2A00ACCA66 /* ContactsCell.m */,
+				FC0A8D511E16C08B00146A42 /* ContactsHeaderView.xib */,
 			);
 			path = GuideMe;
 			sourceTree = "<group>";
@@ -138,18 +158,27 @@
 		83D22C141DFF6449003E8DD8 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				FC60989A1E12D524005AA3B1 /* Contact+CoreDataClass.h */,
-				FC60989B1E12D524005AA3B1 /* Contact+CoreDataClass.m */,
-				FC60989C1E12D524005AA3B1 /* Contact+CoreDataProperties.h */,
-				FC60989D1E12D524005AA3B1 /* Contact+CoreDataProperties.m */,
-				FC60989E1E12D524005AA3B1 /* User+CoreDataClass.h */,
-				FC60989F1E12D524005AA3B1 /* User+CoreDataClass.m */,
-				FC6098A01E12D524005AA3B1 /* User+CoreDataProperties.h */,
-				FC6098A11E12D524005AA3B1 /* User+CoreDataProperties.m */,
+				FC0A8D651E16EA6A00146A42 /* Contact+CoreDataClass.h */,
+				FC0A8D661E16EA6A00146A42 /* Contact+CoreDataClass.m */,
+				FC0A8D671E16EA6A00146A42 /* Contact+CoreDataProperties.h */,
+				FC0A8D681E16EA6A00146A42 /* Contact+CoreDataProperties.m */,
+				FC0A8D691E16EA6A00146A42 /* User+CoreDataClass.h */,
+				FC0A8D6A1E16EA6A00146A42 /* User+CoreDataClass.m */,
+				FC0A8D6B1E16EA6A00146A42 /* User+CoreDataProperties.h */,
+				FC0A8D6C1E16EA6A00146A42 /* User+CoreDataProperties.m */,
 				FC6098921E12C0DB005AA3B1 /* DAO */,
 			);
 			name = Entities;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		FC0A8D711E19506D00146A42 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				FC0A8D721E19509C00146A42 /* SessionData.h */,
+				FC0A8D731E19509C00146A42 /* SessionData.m */,
+			);
+			name = Singletons;
 			sourceTree = "<group>";
 		};
 		FC6098921E12C0DB005AA3B1 /* DAO */ = {
@@ -157,6 +186,8 @@
 			children = (
 				FC6098931E12C10E005AA3B1 /* ContactDAO.h */,
 				FC6098941E12C10E005AA3B1 /* ContactDAO.m */,
+				FC0A8D561E16D70800146A42 /* UserDAO.h */,
+				FC0A8D571E16D70800146A42 /* UserDAO.m */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -203,6 +234,7 @@
 				TargetAttributes = {
 					573189FB1D5BEAF500FC3F5C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = W7L72F5H99;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -232,6 +264,7 @@
 			files = (
 				57318A121D5BEAF500FC3F5C /* LaunchScreen.storyboard in Resources */,
 				57318A0F1D5BEAF500FC3F5C /* Assets.xcassets in Resources */,
+				FC0A8D521E16C08B00146A42 /* ContactsHeaderView.xib in Resources */,
 				57318A0A1D5BEAF500FC3F5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,23 +276,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6098A51E12D524005AA3B1 /* User+CoreDataProperties.m in Sources */,
 				802189F21D89B02600985597 /* HelpMeTwoViewController.m in Sources */,
 				FC6098951E12C10E005AA3B1 /* ContactDAO.m in Sources */,
-				FC6098A21E12D524005AA3B1 /* Contact+CoreDataClass.m in Sources */,
+				FC0A8D581E16D70800146A42 /* UserDAO.m in Sources */,
+				FC0EACDF1E16B5B800ACCA66 /* ContactsHeaderView.m in Sources */,
 				FC6098991E12C541005AA3B1 /* AlertUtil.m in Sources */,
 				57318A0D1D5BEAF500FC3F5C /* GuideMe.xcdatamodeld in Sources */,
+				FC0A8D6D1E16EA6A00146A42 /* Contact+CoreDataClass.m in Sources */,
 				FC6098A81E12D7B2005AA3B1 /* AddContactTableViewController.m in Sources */,
-				FC6098A31E12D524005AA3B1 /* Contact+CoreDataProperties.m in Sources */,
 				FCAB27FC1E143205000909E0 /* ColorUtil.m in Sources */,
+				FC0A8D6F1E16EA6A00146A42 /* User+CoreDataClass.m in Sources */,
+				FC0A8D701E16EA6A00146A42 /* User+CoreDataProperties.m in Sources */,
+				FC0A8D551E16CFE900146A42 /* AddUserTableViewController.m in Sources */,
 				57318A071D5BEAF500FC3F5C /* ViewController.m in Sources */,
 				57318A041D5BEAF500FC3F5C /* AppDelegate.m in Sources */,
 				802189F51D89B0B100985597 /* LoginViewController.m in Sources */,
 				57318A011D5BEAF500FC3F5C /* main.m in Sources */,
-				FC6098A41E12D524005AA3B1 /* User+CoreDataClass.m in Sources */,
 				802189F81D89BAE900985597 /* ContactsTableViewController.m in Sources */,
+				FC0EACE21E16BB2A00ACCA66 /* ContactsCell.m in Sources */,
+				FC0A8D6E1E16EA6A00146A42 /* Contact+CoreDataProperties.m in Sources */,
 				576C41361D5C037D004DC23C /* HelpMeOneViewController.m in Sources */,
-				802189FB1D89BC5900985597 /* UserModel.m in Sources */,
+				FC0A8D741E19509C00146A42 /* SessionData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = W7L72F5H99;
 				INFOPLIST_FILE = GuideMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.aluno.GuideMe;
@@ -388,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = W7L72F5H99;
 				INFOPLIST_FILE = GuideMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.aluno.GuideMe;
