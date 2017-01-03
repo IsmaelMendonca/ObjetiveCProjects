@@ -56,5 +56,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Localização está sendo usada.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Localização está sempre em uso.</string>
 </dict>
 </plist>

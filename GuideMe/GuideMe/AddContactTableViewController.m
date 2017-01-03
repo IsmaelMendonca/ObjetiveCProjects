@@ -158,7 +158,7 @@
     [contact setContactDescription:self.contactDescription.text];
     [contact setContactName:self.contactName.text];
     [contact setContactEmail:self.contactEmail.text];
-    [contact setContactPhoneNumber:self.contactEmail.text];
+    [contact setContactPhoneNumber:self.contactPhoneNumber.text];
     [contact setContactNotification:[NSNumber numberWithBool:self.contactNotification.isOn]];
     [contact setProfileImage:UIImagePNGRepresentation(self.profileImage.image)];
     [contact setUser:session.loggedUser];

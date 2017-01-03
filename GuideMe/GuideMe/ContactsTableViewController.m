@@ -12,15 +12,23 @@
 #import "ContactsHeaderView.h"
 #import "ContactsCell.h"
 #import "SessionData.h"
+@import CoreLocation;
 
-@interface ContactsTableViewController ()
+
+@interface ContactsTableViewController () <CLLocationManagerDelegate>
 @property (strong, nonatomic) NSMutableArray *users;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) ContactsHeaderView* headerView;
 @end
+
+CLLocationCoordinate2D coordinates;
 
 @implementation ContactsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _locationManager = [[CLLocationManager alloc] init];
+    [_locationManager setDelegate:self];
     
 }
 
@@ -33,11 +41,26 @@
     
     SessionData *session = [SessionData sharedSessionData];
     
-    [self.users addObjectsFromArray: [ContactDAO fetchByUser:session.loggedUser]];
+    [self.users addObjectsFromArray: [session.loggedUser.contacts allObjects]];
     
-//    [self.users addObjectsFromArray:[ContactDAO fetchAllContacts]];
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    if (status == kCLAuthorizationStatusNotDetermined) {
+        [_locationManager requestWhenInUseAuthorization];
+    }
+    
+    [_locationManager startUpdatingLocation];
     
     [self.tableView reloadData];
+}
+
+#pragma mark - CLLocationManagerDelegate
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    
+    CLLocation *localization = [locations firstObject];
+    coordinates = localization.coordinate;
+    
+    self.headerView.geoLocalization.text = [NSString stringWithFormat:@"Latitude: %f, Longitude: %f", coordinates.latitude, coordinates.longitude];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,23 +106,26 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    ContactsHeaderView* headerView = [ContactsHeaderView new];
+    self.headerView = [ContactsHeaderView new];
     
     SessionData* session = [SessionData sharedSessionData];
-    headerView.userProfileImage.image = [UIImage imageWithData:session.loggedUser.profileImage];
+    self.headerView.userProfileImage.image = [UIImage imageWithData:session.loggedUser.profileImage];
     
-    headerView.userProfileImage.layer.cornerRadius = headerView.userProfileImage.frame.size.width / 2.0;
-    headerView.userProfileImage.clipsToBounds = YES;
+    self.headerView.userProfileImage.layer.cornerRadius = self.headerView.userProfileImage.frame.size.width / 2.0;
+    self.headerView.userProfileImage.clipsToBounds = YES;
     
-    headerView.greetingsLabel.text = [NSString stringWithFormat:@"Bom dia %@", session.loggedUser.name];
+    self.headerView.greetingsLabel.text = [NSString stringWithFormat:@"Bom dia %@", session.loggedUser.name];
+    
+    self.headerView.geoLocalization.text = [NSString stringWithFormat:@"Latitude: %f, Longitude: %f", coordinates.latitude, coordinates.longitude];
     
     NSLocale* currentLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"pt_BR"];
     NSDateFormatter* formatter = [NSDateFormatter new];
     formatter.dateFormat = @"EEEE, MMM d, yyyy";
     NSDate* today = [NSDate date];
     formatter.locale = currentLocale;
-    headerView.todayLabel.text = [formatter stringFromDate:today];
-    return headerView;
+    self.headerView.todayLabel.text = [formatter stringFromDate:today];
+    
+    return self.headerView;
 }
 - (IBAction)logout:(id)sender {
     SessionData* session = [SessionData sharedSessionData];

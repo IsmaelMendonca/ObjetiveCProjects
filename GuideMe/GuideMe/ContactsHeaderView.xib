@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactsHeaderView">
             <connections>
                 <outlet property="containerView" destination="iN0-l3-epB" id="29U-bH-jHl"/>
+                <outlet property="geoLocalization" destination="Qwc-6a-yPH" id="AYQ-oP-bcf"/>
                 <outlet property="greetingsLabel" destination="h5c-o2-bHw" id="bwx-By-sA4"/>
                 <outlet property="todayLabel" destination="9eG-Tq-NzF" id="v28-fa-Sq8"/>
                 <outlet property="userProfileImage" destination="Phh-Nh-D6g" id="vFg-FW-bAQ"/>
@@ -33,21 +34,30 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6S-A6-Gaz">
                     <rect key="frame" x="0.0" y="75" width="375" height="125"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brasília, 30 de dezembro de 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eG-Tq-NzF">
-                            <rect key="frame" x="0.0" y="101" width="375" height="16"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bom dia Ismael" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5c-o2-bHw">
+                            <rect key="frame" x="0.0" y="44" width="375" height="28"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="16" id="bIt-jd-jqM"/>
+                                <constraint firstAttribute="height" constant="28" id="eiM-KF-4ZD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude: Longitude:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwc-6a-yPH">
+                            <rect key="frame" x="0.0" y="96" width="375" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="pV6-xf-ORy"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bom dia Ismael" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5c-o2-bHw">
-                            <rect key="frame" x="0.0" y="65" width="375" height="28"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brasília, 30 de dezembro de 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eG-Tq-NzF">
+                            <rect key="frame" x="0.0" y="80" width="375" height="16"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="28" id="eiM-KF-4ZD"/>
+                                <constraint firstAttribute="height" constant="16" id="bIt-jd-jqM"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -57,9 +67,12 @@
                         <constraint firstAttribute="trailing" secondItem="9eG-Tq-NzF" secondAttribute="trailing" id="2Tm-By-jQJ"/>
                         <constraint firstAttribute="trailing" secondItem="h5c-o2-bHw" secondAttribute="trailing" id="85Y-I4-4e3"/>
                         <constraint firstItem="h5c-o2-bHw" firstAttribute="leading" secondItem="h6S-A6-Gaz" secondAttribute="leading" id="8Ro-wm-exE"/>
-                        <constraint firstAttribute="bottom" secondItem="9eG-Tq-NzF" secondAttribute="bottom" constant="8" id="9Ar-6w-hDa"/>
+                        <constraint firstItem="Qwc-6a-yPH" firstAttribute="leading" secondItem="h6S-A6-Gaz" secondAttribute="leading" id="AWV-2h-gRN"/>
+                        <constraint firstItem="Qwc-6a-yPH" firstAttribute="top" secondItem="9eG-Tq-NzF" secondAttribute="bottom" id="LyR-Q8-eeR"/>
                         <constraint firstItem="9eG-Tq-NzF" firstAttribute="leading" secondItem="h6S-A6-Gaz" secondAttribute="leading" id="Xhw-RN-9ul"/>
                         <constraint firstItem="9eG-Tq-NzF" firstAttribute="top" secondItem="h5c-o2-bHw" secondAttribute="bottom" constant="8" id="hnM-6B-RV0"/>
+                        <constraint firstAttribute="bottom" secondItem="Qwc-6a-yPH" secondAttribute="bottom" constant="8" id="nea-HD-BzK"/>
+                        <constraint firstAttribute="trailing" secondItem="Qwc-6a-yPH" secondAttribute="trailing" id="q9e-O2-pvP"/>
                     </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Phh-Nh-D6g">

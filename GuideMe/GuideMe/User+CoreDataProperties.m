@@ -2,8 +2,8 @@
 //  User+CoreDataProperties.m
 //  GuideMe
 //
-//  Created by Ismael Felix Mendonça on 30/12/16.
-//  Copyright © 2016 ALUNO. All rights reserved.
+//  Created by Ismael Felix Mendonça on 03/01/17.
+//  Copyright © 2017 ALUNO. All rights reserved.
 //
 
 #import "User+CoreDataProperties.h"
@@ -18,10 +18,10 @@
 @dynamic birthday;
 @dynamic email;
 @dynamic name;
+@dynamic password;
 @dynamic phoneNumber;
 @dynamic profileImage;
 @dynamic userName;
-@dynamic password;
 @dynamic contacts;
 
 @end
