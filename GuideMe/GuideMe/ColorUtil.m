@@ -14,7 +14,7 @@
 }
 
 +(UIColor*) navigationBarTintColor {
-    return [UIColor colorWithRed:11/255.0 green:36/255.0 blue:248/255.0 alpha:1];
+    return [UIColor colorWithRed:10/255.0 green:35/255.0 blue:248/255.0 alpha:1];
 }
 
 +(UIColor*) textFieldBorderColor {

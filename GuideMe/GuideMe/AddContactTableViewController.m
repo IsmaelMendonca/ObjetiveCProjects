@@ -7,6 +7,7 @@
 //
 
 #import "AddContactTableViewController.h"
+#import "RandomImageCollectionViewController.h"
 #import "ColorUtil.h"
 #import "AlertUtil.h"
 #import "ContactDAO.h"
@@ -27,6 +28,8 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    self.navigationController.navigationBar.barTintColor = [ColorUtil navigationBarTintColor];
     
     self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2.0;
     self.profileImage.clipsToBounds = YES;
@@ -86,9 +89,17 @@
                                  [alert dismissViewControllerAnimated:YES completion:nil];
                              }];
     
+    UIAlertAction* goToCollection = [UIAlertAction
+                                     actionWithTitle:@"Coleção"
+                                     style:UIAlertActionStyleDefault
+                                     handler:^(UIAlertAction * action)
+                                     {
+                                         [self performSegueWithIdentifier:@"RandomImageFromContactCollectionIdentifier" sender:self];
+                                     }];
     
     [alert addAction:pickerFromAlbum];
     [alert addAction:takePhoto];
+    [alert addAction:goToCollection];
     [self presentViewController:alert animated:YES completion:nil];
 }
 
@@ -156,7 +167,14 @@
         [AlertUtil showAlertInTable:self WithTitle:@"Erro!" AndMessage:@"Erro ao tentar salvar o Contato, por favor tente novamente!"];
     }
     
-    [self.navigationController popViewControllerAnimated:YES];
+    self.contactDescription.text = @"";
+    self.contactName.text = @"";
+    self.contactPhoneNumber.text = @"";
+    self.contactEmail.text = @"";
+    [self.contactNotification setOn:YES];
+    self.profileImage.image = [UIImage imageNamed:@"emptyPhoto"];
+    
+    self.tabBarController.selectedIndex = 0;
 }
 
 -(BOOL)validateFields {
@@ -187,4 +205,15 @@
     return true;
 }
 
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+    if ([segue.identifier isEqualToString:@"SelectUserImageIdentifier"]) {
+        if([segue.destinationViewController isKindOfClass:[self class]])
+        {
+            RandomImageCollectionViewController* source = segue.sourceViewController;
+            if(source.imageSelected){
+                self.profileImage.image = source.imageSelected;
+            }
+        }
+    }
+}
 @end

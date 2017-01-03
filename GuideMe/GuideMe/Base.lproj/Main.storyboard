@@ -67,7 +67,7 @@ na palma da mão</string>
                                     <color key="titleColor" red="0.0" green="0.0032673434810000001" blue="0.66129807689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zrT-ZV-a08" kind="showDetail" id="Koe-SV-SEE"/>
+                                    <segue destination="vp9-fd-bJe" kind="show" id="OIW-Ex-9BS"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tsuru" translatesAutoresizingMaskIntoConstraints="NO" id="vQY-gM-jr6">
@@ -167,7 +167,7 @@ interagir e encontrar.</string>
                                     <color key="titleColor" red="0.0" green="0.0032673434810000001" blue="0.66129807689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zrT-ZV-a08" kind="showDetail" id="V2q-1j-EC7"/>
+                                    <segue destination="vp9-fd-bJe" kind="show" id="tvq-gu-IN2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -253,7 +253,7 @@ interagir e encontrar.</string>
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zrT-ZV-a08" kind="showDetail" id="IKl-0J-WQ3"/>
+                                    <segue destination="vp9-fd-bJe" kind="show" id="R6p-N1-rMn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -290,27 +290,27 @@ interagir e encontrar.</string>
                         <viewControllerLayoutGuide type="bottom" id="lzY-aE-fWd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jfY-Ff-fqU">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3q-Cu-roo">
-                                <rect key="frame" x="45" y="39" width="285" height="30"/>
+                                <rect key="frame" x="45" y="59" width="285" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jG9-Rs-7Nw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2GJ-3a-oa6">
-                                <rect key="frame" x="45" y="86" width="285" height="30"/>
+                                <rect key="frame" x="45" y="106" width="285" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="UN6-zf-ON6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCg-UX-HTd">
-                                <rect key="frame" x="137.5" y="131" width="100" height="30"/>
+                                <rect key="frame" x="137.5" y="151" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xdt-4E-cgi"/>
                                 </constraints>
@@ -320,7 +320,7 @@ interagir e encontrar.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ea-QP-goL">
-                                <rect key="frame" x="111" y="181" width="153" height="33"/>
+                                <rect key="frame" x="111" y="201" width="153" height="33"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="8PM-iQ-mlO"/>
@@ -357,7 +357,7 @@ interagir e encontrar.</string>
                     <connections>
                         <outlet property="passwordField" destination="2GJ-3a-oa6" id="3Uz-iT-COn"/>
                         <outlet property="userField" destination="R3q-Cu-roo" id="5Ex-df-lAj"/>
-                        <segue destination="JNZ-Sm-QNi" kind="show" identifier="HomeSegueIdentifier" id="qHn-59-K7I"/>
+                        <segue destination="qwM-of-e93" kind="presentation" identifier="HomeSegueIdentifier" id="qHn-59-K7I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ol-Dr-W9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -367,7 +367,7 @@ interagir e encontrar.</string>
         <!--Contatos-->
         <scene sceneID="AJN-Fc-Zr4">
             <objects>
-                <tableViewController id="JNZ-Sm-QNi" customClass="ContactsTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Contatos" id="JNZ-Sm-QNi" customClass="ContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="lOa-Yz-DWC">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -501,16 +501,12 @@ interagir e encontrar.</string>
                             <outlet property="delegate" destination="JNZ-Sm-QNi" id="YBf-NC-SUA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contatos" id="lMd-z1-Nhf">
-                        <barButtonItem key="backBarButtonItem" title="Voltar" id="IOa-iE-Ue9"/>
-                        <barButtonItem key="leftBarButtonItem" title="Sair" id="3wz-wv-jWz">
+                    <navigationItem key="navigationItem" title="Contatos" id="a98-rE-GEw">
+                        <barButtonItem key="backBarButtonItem" title="Sair" id="I91-eb-NUc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sair" id="fCa-bA-KMo">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="logout:" destination="JNZ-Sm-QNi" id="Ko6-8y-VBb"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uJW-wd-Vnb">
-                            <connections>
-                                <segue destination="qmn-Wc-IUh" kind="show" id="OWf-ZD-2NR"/>
+                                <action selector="logout:" destination="JNZ-Sm-QNi" id="vvP-BO-RSE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -518,12 +514,12 @@ interagir e encontrar.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s71-qX-LIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4087.1999999999998" y="456.52173913043481"/>
+            <point key="canvasLocation" x="5272.8000000000002" y="1232.8335832083958"/>
         </scene>
         <!--Adicionar Contato-->
         <scene sceneID="d31-yO-HBm">
             <objects>
-                <tableViewController id="qmn-Wc-IUh" customClass="AddContactTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Adicionar Contato" id="qmn-Wc-IUh" customClass="AddContactTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tFD-Ir-0cc">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -542,7 +538,7 @@ interagir e encontrar.</string>
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -564,7 +560,7 @@ interagir e encontrar.</string>
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -586,7 +582,7 @@ interagir e encontrar.</string>
                                                     <rect key="frame" x="8" y="8" width="359" height="28"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -682,11 +678,11 @@ interagir e encontrar.</string>
                             <outlet property="delegate" destination="qmn-Wc-IUh" id="1oV-MM-2qa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Adicionar Contato" id="Zxi-uj-Omx">
-                        <barButtonItem key="backBarButtonItem" title="Voltar" id="5MU-pS-tm3"/>
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="E8D-2r-crL">
+                    <navigationItem key="navigationItem" title="Adicionar Contatos" id="bMK-Zu-aKv">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Lnm-ZF-HQ5">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="saveContact:" destination="qmn-Wc-IUh" id="qkY-a3-qHW"/>
+                                <action selector="saveContact:" destination="qmn-Wc-IUh" id="d81-x4-Lnd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -697,33 +693,12 @@ interagir e encontrar.</string>
                         <outlet property="contactNotification" destination="osN-oY-Pyv" id="yhe-lm-8N1"/>
                         <outlet property="contactPhoneNumber" destination="n2w-Sl-D4c" id="fn9-bf-8hx"/>
                         <outlet property="profileImage" destination="YI6-TF-v7T" id="Gu6-gL-pxa"/>
+                        <segue destination="CKr-7Z-PCm" kind="show" identifier="RandomImageFromContactCollectionIdentifier" id="jyR-Sy-JGg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELC-4v-pJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4813.6000000000004" y="456.52173913043481"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="1P6-x0-lXw">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zrT-ZV-a08" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="sbY-HO-qmu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.53040480613708496" green="0.80928486585617065" blue="0.9802899956703186" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vp9-fd-bJe" kind="relationship" relationship="rootViewController" id="Ygx-4H-6ll"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qhW-N7-aJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2585" y="457"/>
+            <point key="canvasLocation" x="6343.1999999999998" y="456.52173913043481"/>
         </scene>
         <!--Adicionar Usuário-->
         <scene sceneID="LWk-qh-Hc3">
@@ -747,7 +722,7 @@ interagir e encontrar.</string>
                                                     <rect key="frame" x="8" y="8" width="359" height="28"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -769,7 +744,7 @@ interagir e encontrar.</string>
                                                     <rect key="frame" x="8" y="8" width="359" height="28"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -791,7 +766,7 @@ interagir e encontrar.</string>
                                                     <rect key="frame" x="8" y="8" width="359" height="28"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -813,7 +788,7 @@ interagir e encontrar.</string>
                                                     <rect key="frame" x="8" y="8" width="359" height="28"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -835,7 +810,7 @@ interagir e encontrar.</string>
                                                     <rect key="frame" x="8" y="8" width="359" height="28"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -857,7 +832,10 @@ interagir e encontrar.</string>
                                                     <rect key="frame" x="8" y="8" width="359" height="28"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="HOI-e2-htV" id="sa9-JA-ySP"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -879,7 +857,7 @@ interagir e encontrar.</string>
                                                     <rect key="frame" x="8" y="8" width="359" height="28"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -937,11 +915,71 @@ interagir e encontrar.</string>
                         <outlet property="phoneNumber" destination="LJI-gj-51L" id="Pcb-11-Vyb"/>
                         <outlet property="userName" destination="jBd-0w-Kx8" id="lcp-5a-jsV"/>
                         <outlet property="userProfile" destination="xTb-YF-ca9" id="wDV-jB-159"/>
+                        <segue destination="CKr-7Z-PCm" kind="show" identifier="RandomImageCollectionIdentifier" id="SVa-3P-QtT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxO-jK-jhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4335.1999999999998" y="-235.23238380809596"/>
+            <point key="canvasLocation" x="4334" y="-299"/>
+        </scene>
+        <!--Random Image Collection View Controller-->
+        <scene sceneID="Yca-Eu-Om7">
+            <objects>
+                <collectionViewController id="CKr-7Z-PCm" customClass="RandomImageCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="JY3-an-WHK">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ghf-Hg-vrr">
+                            <size key="itemSize" width="160" height="160"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="Cn1-6l-T3r">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="OJ2-8X-zny" customClass="ImageCollectionViewCell">
+                                <rect key="frame" x="20" y="0.0" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q6Z-Fv-sVI">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="q6Z-Fv-sVI" secondAttribute="bottom" id="6l9-eU-zdu"/>
+                                    <constraint firstAttribute="trailing" secondItem="q6Z-Fv-sVI" secondAttribute="trailing" id="TBH-zI-O3c"/>
+                                    <constraint firstItem="q6Z-Fv-sVI" firstAttribute="leading" secondItem="OJ2-8X-zny" secondAttribute="leading" id="lJh-D5-mbX"/>
+                                    <constraint firstItem="q6Z-Fv-sVI" firstAttribute="top" secondItem="OJ2-8X-zny" secondAttribute="top" id="t3n-xf-17g"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="collectionImage" destination="q6Z-Fv-sVI" id="Iqm-eR-K3W"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="CKr-7Z-PCm" id="NDh-3d-k6Z"/>
+                            <outlet property="delegate" destination="CKr-7Z-PCm" id="oCY-wF-daX"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Cn1-6l-T3r" id="GGI-Je-cNk"/>
+                        <segue destination="hbf-xV-mpP" kind="unwind" identifier="SelectUserImageIdentifier" unwindAction="prepareForUnwind:" id="mQ6-wo-A6D"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLa-Pk-E1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hbf-xV-mpP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="6215" y="-299"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UBj-EX-X9o">
@@ -962,13 +1000,80 @@ interagir e encontrar.</string>
             </objects>
             <point key="canvasLocation" x="3389" y="-299"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yhN-mB-Rsz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qwM-of-e93" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="mop-Ic-b9k">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="h8V-Lw-F1Q" kind="relationship" relationship="viewControllers" id="REw-XE-N8e"/>
+                        <segue destination="DTT-8g-Vqq" kind="relationship" relationship="viewControllers" id="XsD-f4-0cG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ocT-Ui-1Xh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4333.6000000000004" y="456.52173913043481"/>
+        </scene>
+        <!--Adicionar Contato-->
+        <scene sceneID="fl5-R5-uZc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DTT-8g-Vqq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Adicionar Contato" image="addContact" id="QJ7-yF-kpF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="DTV-ON-x4o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.040211983030000002" green="0.1382305026" blue="0.97342735530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qmn-Wc-IUh" kind="relationship" relationship="rootViewController" id="b6T-VO-VIU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T54-5M-AeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5404" y="456.52173913043481"/>
+        </scene>
+        <!--Contatos-->
+        <scene sceneID="epv-D9-TRG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h8V-Lw-F1Q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contatos" image="contacts" id="y0U-1d-KX3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="p91-J4-1dY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.040211983030000002" green="0.1382305026" blue="0.97342735530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JNZ-Sm-QNi" kind="relationship" relationship="rootViewController" id="S3E-wq-37R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujk-8n-NcY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4333.6000000000004" y="1232.8335832083958"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="addContact" width="30" height="30"/>
+        <image name="contacts" width="30" height="30"/>
         <image name="emptyPhoto" width="128" height="128"/>
         <image name="tsuru" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IKl-0J-WQ3"/>
+        <segue reference="R6p-N1-rMn"/>
+        <segue reference="jyR-Sy-JGg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

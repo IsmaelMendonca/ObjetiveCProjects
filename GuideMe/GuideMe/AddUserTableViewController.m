@@ -7,6 +7,7 @@
 //
 
 #import "AddUserTableViewController.h"
+#import "RandomImageCollectionViewController.h"
 #import "AlertUtil.h"
 #import "UserDAO.h"
 
@@ -31,6 +32,39 @@
     UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapRecognizerImage:)];
     
     [self.userProfile addGestureRecognizer:tapGesture];
+    
+    UIDatePicker* picker = [UIDatePicker new];
+    picker.date = [NSDate date];
+    [picker setDatePickerMode:UIDatePickerModeDate];
+    [picker addTarget:self action:@selector(pickerChangedValue:) forControlEvents:UIControlEventValueChanged];
+    
+    UIToolbar* bar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+    UIBarButtonItem* space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem* button = [[UIBarButtonItem alloc] initWithTitle:@"OK" style:UIBarButtonItemStylePlain target:self action:@selector(doneButtonAction:)];
+    
+    [bar setItems: [NSArray arrayWithObjects:space,button,nil]];
+
+    [self.birthday setInputAccessoryView:bar];
+    
+    [self.birthday setInputView:picker];
+}
+
+-(void) doneButtonAction : (UIButton*) sender {
+    [self.birthday resignFirstResponder];
+    
+    NSDateFormatter* formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"dd/MM/yyyy";
+    
+    UIDatePicker* picker = (UIDatePicker*) self.birthday.inputView;
+    
+    self.birthday.text = [formatter stringFromDate:picker.date];
+}
+
+-(void) pickerChangedValue : (UIDatePicker*) picker {
+    NSDateFormatter* formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"dd/MM/yyyy";
+    
+    self.birthday.text = [formatter stringFromDate:picker.date];
 }
 
 -(IBAction)tapRecognizerImage:(id) sender {
@@ -69,9 +103,17 @@
                                     [alert dismissViewControllerAnimated:YES completion:nil];
                                 }];
     
+    UIAlertAction* goToCollection = [UIAlertAction
+                                     actionWithTitle:@"Coleção"
+                                     style:UIAlertActionStyleDefault
+                                     handler:^(UIAlertAction * action)
+                                     {
+                                         [self performSegueWithIdentifier:@"RandomImageCollectionIdentifier" sender:self];
+                                     }];
     
     [alert addAction:pickerFromAlbum];
     [alert addAction:takePhoto];
+    [alert addAction:goToCollection];
     [self presentViewController:alert animated:YES completion:nil];
 }
 
@@ -171,4 +213,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+    if ([segue.identifier isEqualToString:@"SelectUserImageIdentifier"]) {
+        if([segue.destinationViewController isKindOfClass:[self class]])
+        {
+            RandomImageCollectionViewController* source = segue.sourceViewController;
+            if(source.imageSelected){
+                self.userProfile.image = source.imageSelected;
+            }
+        }
+    }
+}
 @end

@@ -13,7 +13,6 @@
 @synthesize loggedUser;
 
 #pragma mark Singleton Methods
-
 + (id)sharedSessionData {
     static SessionData *sharedSessionData = nil;
     static dispatch_once_t onceToken;

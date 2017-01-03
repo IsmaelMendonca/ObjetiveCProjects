@@ -22,7 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.users = [[NSMutableArray alloc] init];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -30,9 +29,13 @@
     
     self.navigationController.navigationBar.barTintColor = [ColorUtil navigationBarTintColor];
     
+    self.users = [[NSMutableArray alloc] init];
+    
     SessionData *session = [SessionData sharedSessionData];
     
     [self.users addObjectsFromArray: [ContactDAO fetchByUser:session.loggedUser]];
+    
+//    [self.users addObjectsFromArray:[ContactDAO fetchAllContacts]];
     
     [self.tableView reloadData];
 }
@@ -90,17 +93,19 @@
     
     headerView.greetingsLabel.text = [NSString stringWithFormat:@"Bom dia %@", session.loggedUser.name];
     
-    NSLocale* currentLocale = [NSLocale currentLocale];
-    
-    headerView.todayLabel.text = [[NSDate date] descriptionWithLocale:currentLocale];
-    
+    NSLocale* currentLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"pt_BR"];
+    NSDateFormatter* formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"EEEE, MMM d, yyyy";
+    NSDate* today = [NSDate date];
+    formatter.locale = currentLocale;
+    headerView.todayLabel.text = [formatter stringFromDate:today];
     return headerView;
 }
 - (IBAction)logout:(id)sender {
     SessionData* session = [SessionData sharedSessionData];
     [session setLoggedUser:nil];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

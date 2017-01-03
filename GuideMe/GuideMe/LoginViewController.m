@@ -32,7 +32,6 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.navigationController.navigationBar.barTintColor = [ColorUtil navigationBarBackground];
     self.userField.text = @"";
     self.passwordField.text = @"";
 }

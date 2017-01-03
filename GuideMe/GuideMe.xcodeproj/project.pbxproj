@@ -26,6 +26,8 @@
 		FC0A8D6F1E16EA6A00146A42 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D6A1E16EA6A00146A42 /* User+CoreDataClass.m */; };
 		FC0A8D701E16EA6A00146A42 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D6C1E16EA6A00146A42 /* User+CoreDataProperties.m */; };
 		FC0A8D741E19509C00146A42 /* SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D731E19509C00146A42 /* SessionData.m */; };
+		FC0A8D771E1A82EF00146A42 /* RandomImageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D761E1A82EF00146A42 /* RandomImageCollectionViewController.m */; };
+		FC0A8D7A1E1AA3AA00146A42 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D791E1AA3AA00146A42 /* ImageCollectionViewCell.m */; };
 		FC0EACDF1E16B5B800ACCA66 /* ContactsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0EACDE1E16B5B800ACCA66 /* ContactsHeaderView.m */; };
 		FC0EACE21E16BB2A00ACCA66 /* ContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0EACE11E16BB2A00ACCA66 /* ContactsCell.m */; };
 		FC6098951E12C10E005AA3B1 /* ContactDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6098941E12C10E005AA3B1 /* ContactDAO.m */; };
@@ -69,6 +71,10 @@
 		FC0A8D6C1E16EA6A00146A42 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "GuideMe/User+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FC0A8D721E19509C00146A42 /* SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionData.h; sourceTree = "<group>"; };
 		FC0A8D731E19509C00146A42 /* SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionData.m; sourceTree = "<group>"; };
+		FC0A8D751E1A82EF00146A42 /* RandomImageCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomImageCollectionViewController.h; sourceTree = "<group>"; };
+		FC0A8D761E1A82EF00146A42 /* RandomImageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomImageCollectionViewController.m; sourceTree = "<group>"; };
+		FC0A8D781E1AA3AA00146A42 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		FC0A8D791E1AA3AA00146A42 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		FC0EACDD1E16B5B800ACCA66 /* ContactsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsHeaderView.h; sourceTree = "<group>"; };
 		FC0EACDE1E16B5B800ACCA66 /* ContactsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsHeaderView.m; sourceTree = "<group>"; };
 		FC0EACE01E16BB2A00ACCA66 /* ContactsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsCell.h; sourceTree = "<group>"; };
@@ -143,6 +149,10 @@
 				FC0EACE01E16BB2A00ACCA66 /* ContactsCell.h */,
 				FC0EACE11E16BB2A00ACCA66 /* ContactsCell.m */,
 				FC0A8D511E16C08B00146A42 /* ContactsHeaderView.xib */,
+				FC0A8D751E1A82EF00146A42 /* RandomImageCollectionViewController.h */,
+				FC0A8D761E1A82EF00146A42 /* RandomImageCollectionViewController.m */,
+				FC0A8D781E1AA3AA00146A42 /* ImageCollectionViewCell.h */,
+				FC0A8D791E1AA3AA00146A42 /* ImageCollectionViewCell.m */,
 			);
 			path = GuideMe;
 			sourceTree = "<group>";
@@ -278,6 +288,7 @@
 			files = (
 				802189F21D89B02600985597 /* HelpMeTwoViewController.m in Sources */,
 				FC6098951E12C10E005AA3B1 /* ContactDAO.m in Sources */,
+				FC0A8D7A1E1AA3AA00146A42 /* ImageCollectionViewCell.m in Sources */,
 				FC0A8D581E16D70800146A42 /* UserDAO.m in Sources */,
 				FC0EACDF1E16B5B800ACCA66 /* ContactsHeaderView.m in Sources */,
 				FC6098991E12C541005AA3B1 /* AlertUtil.m in Sources */,
@@ -295,6 +306,7 @@
 				802189F81D89BAE900985597 /* ContactsTableViewController.m in Sources */,
 				FC0EACE21E16BB2A00ACCA66 /* ContactsCell.m in Sources */,
 				FC0A8D6E1E16EA6A00146A42 /* Contact+CoreDataProperties.m in Sources */,
+				FC0A8D771E1A82EF00146A42 /* RandomImageCollectionViewController.m in Sources */,
 				576C41361D5C037D004DC23C /* HelpMeOneViewController.m in Sources */,
 				FC0A8D741E19509C00146A42 /* SessionData.m in Sources */,
 			);
