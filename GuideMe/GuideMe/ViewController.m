@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "FallBehavior.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface ViewController ()
+@interface ViewController () <UIDynamicAnimatorDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *tutorialButton;
 
 @end
@@ -68,6 +69,13 @@
                                              selector:@selector(orientationChanged:)
                                                  name:UIDeviceOrientationDidChangeNotification
                                                object:nil];
+    
+    CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.fromValue = [NSNumber numberWithFloat:0.0f];
+    animation.toValue = [NSNumber numberWithFloat: 2*M_PI];
+    animation.duration = 10.0f;
+    animation.repeatCount = INFINITY;
+    [self.image.layer addAnimation:animation forKey:@"SpinAnimation"];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -76,6 +84,8 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIDeviceOrientationDidChangeNotification
                                                   object:nil];
+    
+    [self.image.layer removeAnimationForKey:@"SpinAnimation"];
 }
 
 - (void) orientationChanged: (NSNotification *) sender {

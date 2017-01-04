@@ -11,11 +11,12 @@
 #import "ContactDAO.h"
 #import "ContactsHeaderView.h"
 #import "ContactsCell.h"
+#import "MapViewController.h"
 #import "SessionData.h"
 @import CoreLocation;
 
 
-@interface ContactsTableViewController () <CLLocationManagerDelegate>
+@interface ContactsTableViewController () <CLLocationManagerDelegate, UIGestureRecognizerDelegate>
 @property (strong, nonatomic) NSMutableArray *users;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) ContactsHeaderView* headerView;
@@ -29,7 +30,6 @@ CLLocationCoordinate2D coordinates;
     [super viewDidLoad];
     _locationManager = [[CLLocationManager alloc] init];
     [_locationManager setDelegate:self];
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -61,6 +61,8 @@ CLLocationCoordinate2D coordinates;
     coordinates = localization.coordinate;
     
     self.headerView.geoLocalization.text = [NSString stringWithFormat:@"Latitude: %f, Longitude: %f", coordinates.latitude, coordinates.longitude];
+    
+    [_locationManager stopUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -118,6 +120,14 @@ CLLocationCoordinate2D coordinates;
     
     self.headerView.geoLocalization.text = [NSString stringWithFormat:@"Latitude: %f, Longitude: %f", coordinates.latitude, coordinates.longitude];
     
+    self.headerView.geoLocalization.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer* dualTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dualTapRecognizerImage:)];
+    
+    [dualTapGesture setNumberOfTapsRequired:2];
+    
+    [self.headerView.geoLocalization addGestureRecognizer:dualTapGesture];
+    
     NSLocale* currentLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"pt_BR"];
     NSDateFormatter* formatter = [NSDateFormatter new];
     formatter.dateFormat = @"EEEE, MMM d, yyyy";
@@ -127,6 +137,19 @@ CLLocationCoordinate2D coordinates;
     
     return self.headerView;
 }
+
+-(IBAction)dualTapRecognizerImage:(id) sender {
+    
+    [self performSegueWithIdentifier:@"MapIdentifier" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"MapIdentifier"]) {
+       MapViewController* mapView = (MapViewController*) segue.destinationViewController;
+        [mapView setCoordinates:coordinates];
+    }
+}
+
 - (IBAction)logout:(id)sender {
     SessionData* session = [SessionData sharedSessionData];
     [session setLoggedUser:nil];

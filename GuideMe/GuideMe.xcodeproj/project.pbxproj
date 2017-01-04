@@ -18,7 +18,7 @@
 		802189F21D89B02600985597 /* HelpMeTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189F11D89B02600985597 /* HelpMeTwoViewController.m */; };
 		802189F51D89B0B100985597 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189F41D89B0B100985597 /* LoginViewController.m */; };
 		802189F81D89BAE900985597 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802189F71D89BAE900985597 /* ContactsTableViewController.m */; };
-		FC0A8D521E16C08B00146A42 /* ContactsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0A8D511E16C08B00146A42 /* ContactsHeaderView.xib */; };
+		FC0A8D521E16C08B00146A42 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		FC0A8D551E16CFE900146A42 /* AddUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D541E16CFE900146A42 /* AddUserTableViewController.m */; };
 		FC0A8D581E16D70800146A42 /* UserDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D571E16D70800146A42 /* UserDAO.m */; };
 		FC0A8D741E19509C00146A42 /* SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8D731E19509C00146A42 /* SessionData.m */; };
@@ -34,7 +34,26 @@
 		FCADD3391E1C03200081C082 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FCADD3331E1C03200081C082 /* Contact+CoreDataProperties.m */; };
 		FCADD33A1E1C03200081C082 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FCADD3351E1C03200081C082 /* User+CoreDataClass.m */; };
 		FCADD33B1E1C03200081C082 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FCADD3371E1C03200081C082 /* User+CoreDataProperties.m */; };
+		FCADD33E1E1D14940081C082 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCADD33D1E1D14940081C082 /* MapViewController.m */; };
+		FCADD3421E1D588B0081C082 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCADD3401E1D58800081C082 /* MapKit.framework */; };
+		FCADD3431E1D588B0081C082 /* MapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCADD3401E1D58800081C082 /* MapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FCADD3471E1D62020081C082 /* FallBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = FCADD3461E1D62020081C082 /* FallBehavior.m */; };
+		FCADD34B1E1D87CE0081C082 /* ContactsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCADD34A1E1D87CE0081C082 /* ContactsHeaderView.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FCADD3441E1D588B0081C082 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FCADD3431E1D588B0081C082 /* MapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		573189FC1D5BEAF500FC3F5C /* GuideMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuideMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +75,6 @@
 		802189F41D89B0B100985597 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		802189F61D89BAE900985597 /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
 		802189F71D89BAE900985597 /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
-		FC0A8D511E16C08B00146A42 /* ContactsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsHeaderView.xib; sourceTree = "<group>"; };
 		FC0A8D531E16CFE900146A42 /* AddUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserTableViewController.h; sourceTree = "<group>"; };
 		FC0A8D541E16CFE900146A42 /* AddUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserTableViewController.m; sourceTree = "<group>"; };
 		FC0A8D561E16D70800146A42 /* UserDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDAO.h; path = GuideMe/UserDAO.h; sourceTree = "<group>"; };
@@ -87,6 +105,12 @@
 		FCADD3351E1C03200081C082 /* User+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataClass.m"; path = "GuideMe/User+CoreDataClass.m"; sourceTree = "<group>"; };
 		FCADD3361E1C03200081C082 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "GuideMe/User+CoreDataProperties.h"; sourceTree = "<group>"; };
 		FCADD3371E1C03200081C082 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "GuideMe/User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FCADD33C1E1D14940081C082 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		FCADD33D1E1D14940081C082 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		FCADD3401E1D58800081C082 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FCADD3451E1D62020081C082 /* FallBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FallBehavior.h; sourceTree = "<group>"; };
+		FCADD3461E1D62020081C082 /* FallBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FallBehavior.m; sourceTree = "<group>"; };
+		FCADD34A1E1D87CE0081C082 /* ContactsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCADD3421E1D588B0081C082 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +130,7 @@
 			children = (
 				573189FE1D5BEAF500FC3F5C /* GuideMe */,
 				573189FD1D5BEAF500FC3F5C /* Products */,
+				FCADD33F1E1D58800081C082 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +157,7 @@
 				FC0A8D541E16CFE900146A42 /* AddUserTableViewController.m */,
 				FC0EACDD1E16B5B800ACCA66 /* ContactsHeaderView.h */,
 				FC0EACDE1E16B5B800ACCA66 /* ContactsHeaderView.m */,
+				FCADD34A1E1D87CE0081C082 /* ContactsHeaderView.xib */,
 				57318A0E1D5BEAF500FC3F5C /* Assets.xcassets */,
 				57318A101D5BEAF500FC3F5C /* LaunchScreen.storyboard */,
 				57318A131D5BEAF500FC3F5C /* Info.plist */,
@@ -148,11 +175,14 @@
 				FC6098A71E12D7B2005AA3B1 /* AddContactTableViewController.m */,
 				FC0EACE01E16BB2A00ACCA66 /* ContactsCell.h */,
 				FC0EACE11E16BB2A00ACCA66 /* ContactsCell.m */,
-				FC0A8D511E16C08B00146A42 /* ContactsHeaderView.xib */,
 				FC0A8D751E1A82EF00146A42 /* RandomImageCollectionViewController.h */,
 				FC0A8D761E1A82EF00146A42 /* RandomImageCollectionViewController.m */,
+				FCADD3451E1D62020081C082 /* FallBehavior.h */,
+				FCADD3461E1D62020081C082 /* FallBehavior.m */,
 				FC0A8D781E1AA3AA00146A42 /* ImageCollectionViewCell.h */,
 				FC0A8D791E1AA3AA00146A42 /* ImageCollectionViewCell.m */,
+				FCADD33C1E1D14940081C082 /* MapViewController.h */,
+				FCADD33D1E1D14940081C082 /* MapViewController.m */,
 			);
 			path = GuideMe;
 			sourceTree = "<group>";
@@ -213,6 +243,14 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		FCADD33F1E1D58800081C082 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCADD3401E1D58800081C082 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,6 +261,7 @@
 				573189F81D5BEAF500FC3F5C /* Sources */,
 				573189F91D5BEAF500FC3F5C /* Frameworks */,
 				573189FA1D5BEAF500FC3F5C /* Resources */,
+				FCADD3441E1D588B0081C082 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,13 +278,18 @@
 		573189F41D5BEAF500FC3F5C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = ALUNO;
 				TargetAttributes = {
 					573189FB1D5BEAF500FC3F5C = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = W7L72F5H99;
 						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -274,7 +318,8 @@
 			files = (
 				57318A121D5BEAF500FC3F5C /* LaunchScreen.storyboard in Resources */,
 				57318A0F1D5BEAF500FC3F5C /* Assets.xcassets in Resources */,
-				FC0A8D521E16C08B00146A42 /* ContactsHeaderView.xib in Resources */,
+				FC0A8D521E16C08B00146A42 /* (null) in Resources */,
+				FCADD34B1E1D87CE0081C082 /* ContactsHeaderView.xib in Resources */,
 				57318A0A1D5BEAF500FC3F5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +334,7 @@
 				802189F21D89B02600985597 /* HelpMeTwoViewController.m in Sources */,
 				FCADD3391E1C03200081C082 /* Contact+CoreDataProperties.m in Sources */,
 				FC6098951E12C10E005AA3B1 /* ContactDAO.m in Sources */,
+				FCADD33E1E1D14940081C082 /* MapViewController.m in Sources */,
 				FCADD33B1E1C03200081C082 /* User+CoreDataProperties.m in Sources */,
 				FC0A8D7A1E1AA3AA00146A42 /* ImageCollectionViewCell.m in Sources */,
 				FC0A8D581E16D70800146A42 /* UserDAO.m in Sources */,
@@ -299,6 +345,7 @@
 				FCAB27FC1E143205000909E0 /* ColorUtil.m in Sources */,
 				FC0A8D551E16CFE900146A42 /* AddUserTableViewController.m in Sources */,
 				57318A071D5BEAF500FC3F5C /* ViewController.m in Sources */,
+				FCADD3471E1D62020081C082 /* FallBehavior.m in Sources */,
 				57318A041D5BEAF500FC3F5C /* AppDelegate.m in Sources */,
 				802189F51D89B0B100985597 /* LoginViewController.m in Sources */,
 				FCADD33A1E1C03200081C082 /* User+CoreDataClass.m in Sources */,
@@ -348,8 +395,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -393,8 +442,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

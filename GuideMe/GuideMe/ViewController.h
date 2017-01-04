@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 +(void) setGradientBackground : (UIViewController *) viewController;
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (strong, nonatomic) IBOutlet UIView *mainView;
 
 @end
 

@@ -97,6 +97,8 @@ na palma da mão</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="image" destination="vQY-gM-jr6" id="bDA-8A-Xp1"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="hDn-IE-lHL"/>
                         <outlet property="tutorialButton" destination="XUg-T4-a8q" id="SgZ-vl-e88"/>
                     </connections>
                 </viewController>
@@ -511,10 +513,48 @@ interagir e encontrar.</string>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="8oq-VC-nww" kind="show" identifier="MapIdentifier" id="JdZ-s8-Abl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s71-qX-LIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5272.8000000000002" y="1232.8335832083958"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="wry-3D-TtW">
+            <objects>
+                <viewController id="8oq-VC-nww" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0rA-Kd-FCD"/>
+                        <viewControllerLayoutGuide type="bottom" id="mrb-KC-a4f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ikZ-sQ-mrY">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="neo-Mi-OCh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8oq-VC-nww" id="oq7-Nv-kiD"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mrb-KC-a4f" firstAttribute="top" secondItem="neo-Mi-OCh" secondAttribute="bottom" id="Ga9-eW-hU9"/>
+                            <constraint firstItem="neo-Mi-OCh" firstAttribute="leading" secondItem="ikZ-sQ-mrY" secondAttribute="leading" id="Msx-xr-xP1"/>
+                            <constraint firstItem="neo-Mi-OCh" firstAttribute="top" secondItem="0rA-Kd-FCD" secondAttribute="bottom" id="Ptu-xm-wC3"/>
+                            <constraint firstAttribute="trailing" secondItem="neo-Mi-OCh" secondAttribute="trailing" id="bcP-hw-QRj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="neo-Mi-OCh" id="Kcr-i4-JCC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfF-Yl-cLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6341.6000000000004" y="1231.9340329835084"/>
         </scene>
         <!--Adicionar Contato-->
         <scene sceneID="d31-yO-HBm">
@@ -926,7 +966,7 @@ interagir e encontrar.</string>
         <scene sceneID="Yca-Eu-Om7">
             <objects>
                 <collectionViewController id="CKr-7Z-PCm" customClass="RandomImageCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="JY3-an-WHK">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JY3-an-WHK">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1006,6 +1046,7 @@ interagir e encontrar.</string>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qwM-of-e93" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="mop-Ic-b9k">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -1024,7 +1065,7 @@ interagir e encontrar.</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DTT-8g-Vqq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Adicionar Contato" image="addContact" id="QJ7-yF-kpF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="DTV-ON-x4o">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="DTV-ON-x4o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.040211983030000002" green="0.1382305026" blue="0.97342735530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1047,7 +1088,7 @@ interagir e encontrar.</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h8V-Lw-F1Q" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Contatos" image="contacts" id="y0U-1d-KX3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="p91-J4-1dY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="p91-J4-1dY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.040211983030000002" green="0.1382305026" blue="0.97342735530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1072,7 +1113,7 @@ interagir e encontrar.</string>
         <image name="tsuru" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R6p-N1-rMn"/>
+        <segue reference="OIW-Ex-9BS"/>
         <segue reference="jyR-Sy-JGg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
