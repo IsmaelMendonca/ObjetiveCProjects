@@ -35,25 +35,10 @@
 		FCADD33A1E1C03200081C082 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FCADD3351E1C03200081C082 /* User+CoreDataClass.m */; };
 		FCADD33B1E1C03200081C082 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FCADD3371E1C03200081C082 /* User+CoreDataProperties.m */; };
 		FCADD33E1E1D14940081C082 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCADD33D1E1D14940081C082 /* MapViewController.m */; };
-		FCADD3421E1D588B0081C082 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCADD3401E1D58800081C082 /* MapKit.framework */; };
-		FCADD3431E1D588B0081C082 /* MapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCADD3401E1D58800081C082 /* MapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FCADD3471E1D62020081C082 /* FallBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = FCADD3461E1D62020081C082 /* FallBehavior.m */; };
 		FCADD34B1E1D87CE0081C082 /* ContactsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCADD34A1E1D87CE0081C082 /* ContactsHeaderView.xib */; };
+		FCADD34D1E1D921D0081C082 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCADD3401E1D58800081C082 /* MapKit.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		FCADD3441E1D588B0081C082 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FCADD3431E1D588B0081C082 /* MapKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		573189FC1D5BEAF500FC3F5C /* GuideMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuideMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCADD3421E1D588B0081C082 /* MapKit.framework in Frameworks */,
+				FCADD34D1E1D921D0081C082 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +246,6 @@
 				573189F81D5BEAF500FC3F5C /* Sources */,
 				573189F91D5BEAF500FC3F5C /* Frameworks */,
 				573189FA1D5BEAF500FC3F5C /* Resources */,
-				FCADD3441E1D588B0081C082 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
