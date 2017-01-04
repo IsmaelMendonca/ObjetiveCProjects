@@ -122,7 +122,7 @@ CLLocationCoordinate2D coordinates;
     
     self.headerView.geoLocalization.userInteractionEnabled = YES;
     
-    UITapGestureRecognizer* dualTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dualTapRecognizerImage:)];
+    UITapGestureRecognizer* dualTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dualTapRecognizerLabel:)];
     
     [dualTapGesture setNumberOfTapsRequired:2];
     
@@ -138,7 +138,7 @@ CLLocationCoordinate2D coordinates;
     return self.headerView;
 }
 
--(IBAction)dualTapRecognizerImage:(id) sender {
+-(IBAction)dualTapRecognizerLabel:(id) sender {
     
     [self performSegueWithIdentifier:@"MapIdentifier" sender:self];
 }
